@@ -1,0 +1,3666 @@
+[
+  {
+    "id": "nibbit",
+    "name": "Nibbit",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Nibbit",
+    "hp": "42–46",
+    "hpAsc": {
+      "a": 8,
+      "v": "44–48"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "butt",
+        "name": "Butt",
+        "intent": "attack",
+        "text": "12 damage",
+        "asc": {
+          "a": 9,
+          "v": "13 damage"
+        }
+      },
+      {
+        "id": "slice",
+        "name": "Hesitant Slice",
+        "intent": "attack",
+        "text": "6 damage, gains 5 Block",
+        "asc": {
+          "a": 9,
+          "v": "7 damage, 6 Block"
+        }
+      },
+      {
+        "id": "hiss",
+        "name": "Hiss",
+        "intent": "buff",
+        "text": "Gains 2 Strength",
+        "asc": {
+          "a": 9,
+          "v": "3 Strength"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "butt",
+          "slice",
+          "hiss"
+        ],
+        "rules": [
+          "Fixed order, repeating."
+        ]
+      }
+    ],
+    "starts": [
+      {
+        "label": "Solo",
+        "at": "butt"
+      },
+      {
+        "label": "Pair: front",
+        "at": "slice"
+      },
+      {
+        "label": "Pair: back",
+        "at": "hiss"
+      }
+    ],
+    "scaling": "+2 Strength every third turn (Hiss).",
+    "threat": [
+      "Solo: Butt lands on turns 1, 4, 7 — each one after a Hiss is 2 damage bigger.",
+      "Pair: the two are offset, so one of them is always attacking."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "leaf_slime_s",
+    "name": "Leaf Slime (S)",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Slimes",
+    "hp": "11–15",
+    "hpAsc": {
+      "a": 8,
+      "v": "12–16"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "tackle",
+        "name": "Tackle",
+        "intent": "attack",
+        "text": "3 damage",
+        "asc": {
+          "a": 8,
+          "v": "4 damage"
+        }
+      },
+      {
+        "id": "goop",
+        "name": "Goop",
+        "intent": "status",
+        "text": "Shuffles 1 Slimed into your discard pile"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "random": [
+          {
+            "move": "tackle",
+            "w": 50
+          },
+          {
+            "move": "goop",
+            "w": 50
+          }
+        ],
+        "rules": [
+          "Random each turn.",
+          "Never the same move twice in a row."
+        ]
+      }
+    ],
+    "scaling": "None, but Slimed cards clog your deck.",
+    "threat": [
+      "Low damage; the cost is the Slimed cards added to your deck for the fight."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "leaf_slime_m",
+    "name": "Leaf Slime (M)",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Slimes",
+    "hp": "32–35",
+    "hpAsc": {
+      "a": 8,
+      "v": "33–36"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "clump",
+        "name": "Clump Shot",
+        "intent": "attack",
+        "text": "8 damage",
+        "asc": {
+          "a": 8,
+          "v": "9 damage"
+        }
+      },
+      {
+        "id": "sticky",
+        "name": "Sticky Shot",
+        "intent": "status",
+        "text": "Shuffles 2 Slimed into your discard pile"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "sticky",
+          "clump"
+        ],
+        "rules": [
+          "Opens with Sticky Shot, then alternates."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "2 Slimed every other turn: longer fights mean more dead draws."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "twig_slime_s",
+    "name": "Twig Slime (S)",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Slimes",
+    "hp": "7–11",
+    "hpAsc": {
+      "a": 8,
+      "v": "8–12"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "tackle",
+        "name": "Tackle",
+        "intent": "attack",
+        "text": "4 damage",
+        "asc": {
+          "a": 8,
+          "v": "5 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "tackle"
+        ],
+        "rules": [
+          "Tackle every turn."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "Low HP; dies to almost any attack."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "twig_slime_m",
+    "name": "Twig Slime (M)",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Slimes",
+    "hp": "26–28",
+    "hpAsc": {
+      "a": 8,
+      "v": "27–29"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "chomp",
+        "name": "Chomp",
+        "intent": "attack",
+        "text": "11 damage",
+        "asc": {
+          "a": 8,
+          "v": "12 damage"
+        }
+      },
+      {
+        "id": "sticky",
+        "name": "Sticky Shot",
+        "intent": "status",
+        "text": "Shuffles 1 Slimed into your discard pile"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "sticky"
+        ],
+        "random": [
+          {
+            "move": "chomp",
+            "w": 67
+          },
+          {
+            "move": "sticky",
+            "w": 33
+          }
+        ],
+        "rules": [
+          "Opens with Sticky Shot.",
+          "Then random: Chomp 67%, Sticky Shot 33%.",
+          "Never Sticky Shot twice in a row."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "Hits harder than its size suggests (11) on most turns after turn 1."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "shrinker_beetle",
+    "name": "Shrinker Beetle",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Shrinker_Beetle",
+    "hp": "38–40",
+    "hpAsc": {
+      "a": 8,
+      "v": "40–42"
+    },
+    "powers": [
+      {
+        "name": "Shrink (on you)",
+        "text": "Your Attacks deal 30% less damage. Removed when the Beetle dies."
+      }
+    ],
+    "moves": [
+      {
+        "id": "shrinker",
+        "name": "Shrinker",
+        "intent": "debuff",
+        "text": "Applies Shrink to you"
+      },
+      {
+        "id": "chomp",
+        "name": "Chomp",
+        "intent": "attack",
+        "text": "7 damage",
+        "asc": {
+          "a": 8,
+          "v": "8 damage"
+        }
+      },
+      {
+        "id": "stomp",
+        "name": "Stomp",
+        "intent": "attack",
+        "text": "13 damage",
+        "asc": {
+          "a": 8,
+          "v": "14 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "shrinker"
+        ],
+        "cycle": [
+          "chomp",
+          "stomp"
+        ],
+        "rules": [
+          "Opens with Shrinker, then alternates Chomp / Stomp."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "Shrink cuts your attack damage by 30% until it dies — including against its partner in Overgrowth Crawlers."
+    ],
+    "tips": {
+      "general": [
+        "In Overgrowth Crawlers, killing the Beetle first removes Shrink for the rest of the fight."
+      ],
+      "silent": [
+        "Poison is not an Attack, so Shrink does not reduce it."
+      ],
+      "defect": [
+        "Orb damage is not an Attack, so Shrink does not reduce it."
+      ],
+      "necrobinder": [
+        "Doom is not an Attack, so Shrink should not reduce it (not checked)."
+      ]
+    },
+    "confidence": "wiki"
+  },
+  {
+    "id": "fuzzy_wurm_crawler",
+    "name": "Fuzzy Wurm Crawler",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Fuzzy_Wurm_Crawler",
+    "hp": "55–57",
+    "hpAsc": {
+      "a": 8,
+      "v": "58–59"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "goop",
+        "name": "Acid Goop",
+        "intent": "attack",
+        "text": "4 damage",
+        "asc": {
+          "a": 8,
+          "v": "6 damage"
+        }
+      },
+      {
+        "id": "inhale",
+        "name": "Inhale",
+        "intent": "buff",
+        "text": "Gains 7 Strength"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "goop",
+          "inhale",
+          "goop"
+        ],
+        "rules": [
+          "Fixed 3-turn cycle: Goop, Inhale, Goop — so Goop twice in a row across cycles."
+        ]
+      }
+    ],
+    "scaling": "+7 Strength every 3 turns. Acid Goop: 4 → 11 → 18 → 25.",
+    "threat": [
+      "Harmless early, dangerous if the fight drags past turn 5."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "inklet",
+    "name": "Inklet",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Inklet",
+    "hp": "11–17",
+    "hpAsc": {
+      "a": 8,
+      "v": "12–18"
+    },
+    "powers": [
+      {
+        "name": "Slippery 1",
+        "text": "The next time it loses HP, it only loses 1 HP instead."
+      }
+    ],
+    "moves": [
+      {
+        "id": "jab",
+        "name": "Jab",
+        "intent": "attack",
+        "text": "3 damage",
+        "asc": {
+          "a": 8,
+          "v": "4 damage"
+        }
+      },
+      {
+        "id": "whirl",
+        "name": "Whirlwind",
+        "intent": "attack",
+        "text": "2 × 3 damage",
+        "asc": {
+          "a": 8,
+          "v": "3 × 3"
+        }
+      },
+      {
+        "id": "gaze",
+        "name": "Piercing Gaze",
+        "intent": "attack",
+        "text": "10 damage",
+        "asc": {
+          "a": 8,
+          "v": "11 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "random": [
+          {
+            "move": "gaze",
+            "w": 50
+          },
+          {
+            "move": "whirl",
+            "w": 50
+          }
+        ],
+        "rules": [
+          "Always 3 Inklets.",
+          "Outer two open with Jab; middle opens with Whirlwind.",
+          "Then alternates: Jab, then a 50/50 of Piercing Gaze or Whirlwind."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "Slippery wastes your first hit on each Inklet, so a single big attack is poor value."
+    ],
+    "tips": {
+      "general": [
+        "A cheap hit first strips Slippery; save the bigger hit for after."
+      ],
+      "silent": [
+        "Shivs strip Slippery cheaply."
+      ],
+      "regent": [
+        "A single Sovereign Blade hit only removes Slippery; open with something small."
+      ]
+    },
+    "confidence": "wiki"
+  },
+  {
+    "id": "flyconid",
+    "name": "Flyconid",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Flyconid",
+    "hp": "47–49",
+    "hpAsc": {
+      "a": 8,
+      "v": "51–53"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "weak_spores",
+        "name": "Weakening Spores",
+        "intent": "debuff",
+        "text": "Applies 2 Vulnerable"
+      },
+      {
+        "id": "frail_spores",
+        "name": "Frail Spores",
+        "intent": "attack",
+        "text": "8 damage, applies 2 Frail",
+        "asc": {
+          "a": 8,
+          "v": "9 damage"
+        }
+      },
+      {
+        "id": "smash",
+        "name": "Smash",
+        "intent": "attack",
+        "text": "11 damage",
+        "asc": {
+          "a": 8,
+          "v": "12 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Turn 1",
+        "opener": [],
+        "random": [
+          {
+            "move": "frail_spores",
+            "w": 67
+          },
+          {
+            "move": "smash",
+            "w": 33
+          }
+        ],
+        "rules": [
+          "Never opens with Weakening Spores."
+        ]
+      },
+      {
+        "name": "Turn 2 onward",
+        "opener": [],
+        "random": [
+          {
+            "move": "weak_spores",
+            "w": 50
+          },
+          {
+            "move": "frail_spores",
+            "w": 33
+          },
+          {
+            "move": "smash",
+            "w": 17
+          }
+        ],
+        "rules": [
+          "Never the same move twice in a row."
+        ]
+      }
+    ],
+    "scaling": "None; it makes its partner hit harder via Vulnerable.",
+    "threat": [
+      "Note: the wiki names the move 'Weakening Spores' but lists its effect as 2 Vulnerable. Check the in-game intent."
+    ],
+    "tips": {},
+    "confidence": "check",
+    "checkNote": "Weakening Spores effect (Vulnerable vs Weak) looks inconsistent on the wiki."
+  },
+  {
+    "id": "snapping_jaxfruit",
+    "name": "Snapping Jaxfruit",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Snapping_Jaxfruit",
+    "hp": "31–33",
+    "hpAsc": {
+      "a": 8,
+      "v": "34–36"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "orb",
+        "name": "Energy Orb",
+        "intent": "attack",
+        "text": "3 damage, gains 2 Strength",
+        "asc": {
+          "a": 8,
+          "v": "4 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "orb"
+        ],
+        "rules": [
+          "Energy Orb every turn."
+        ]
+      }
+    ],
+    "scaling": "+2 Strength every turn: 3 → 5 → 7 → 9…",
+    "threat": [
+      "Low HP but scales every turn; its partner is the bigger immediate hitter."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "fogmog",
+    "name": "Fogmog",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Fogmog",
+    "hp": "74",
+    "hpAsc": {
+      "a": 8,
+      "v": "78"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "spores",
+        "name": "Illusory Spores",
+        "intent": "summon",
+        "text": "Summons an Eye With Teeth"
+      },
+      {
+        "id": "thwack",
+        "name": "Thwack",
+        "intent": "attack",
+        "text": "8 damage, gains 1 Strength",
+        "asc": {
+          "a": 8,
+          "v": "9 damage"
+        }
+      },
+      {
+        "id": "headbutt",
+        "name": "Headbutt",
+        "intent": "attack",
+        "text": "14 damage",
+        "asc": {
+          "a": 8,
+          "v": "16 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "spores",
+          "thwack"
+        ],
+        "random": [
+          {
+            "move": "thwack",
+            "w": 40
+          },
+          {
+            "move": "headbutt",
+            "w": 60
+          }
+        ],
+        "rules": [
+          "Opens: Illusory Spores, then Thwack.",
+          "Then random: Thwack 40%, Headbutt 60%. Never the same move twice.",
+          "After a random Thwack → always Headbutt. After Headbutt → always Thwack, then back to random."
+        ]
+      }
+    ],
+    "scaling": "+1 Strength per Thwack.",
+    "threat": [
+      "The Eye revives every turn — killing it only buys one turn without Dazed."
+    ],
+    "tips": {
+      "general": [
+        "The Eye has 6 HP and revives next turn; damage on Fogmog itself ends the fight."
+      ]
+    },
+    "confidence": "wiki",
+    "companions": [
+      "eye_with_teeth"
+    ]
+  },
+  {
+    "id": "eye_with_teeth",
+    "name": "Eye With Teeth",
+    "kind": "minion",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Fogmog",
+    "hp": "6",
+    "powers": [
+      {
+        "name": "Illusion",
+        "text": "When this dies, it revives next turn at full HP."
+      }
+    ],
+    "moves": [
+      {
+        "id": "distract",
+        "name": "Distract",
+        "intent": "status",
+        "text": "Shuffles 3 Dazed into your discard pile"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "distract"
+        ],
+        "rules": [
+          "Distract every turn."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "3 Dazed a turn adds up quickly in a long fight."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "mawler",
+    "name": "Mawler",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Mawler",
+    "hp": "72",
+    "hpAsc": {
+      "a": 8,
+      "v": "76"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "rip",
+        "name": "Rip and Tear",
+        "intent": "attack",
+        "text": "14 damage",
+        "asc": {
+          "a": 9,
+          "v": "16 damage"
+        }
+      },
+      {
+        "id": "roar",
+        "name": "Roar",
+        "intent": "debuff",
+        "text": "Applies 3 Vulnerable"
+      },
+      {
+        "id": "claw",
+        "name": "Claw",
+        "intent": "attack",
+        "text": "4 × 2 damage",
+        "asc": {
+          "a": 9,
+          "v": "5 × 2"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "claw"
+        ],
+        "random": [
+          {
+            "move": "rip",
+            "w": 33
+          },
+          {
+            "move": "roar",
+            "w": 33
+          },
+          {
+            "move": "claw",
+            "w": 33
+          }
+        ],
+        "rules": [
+          "Opens with Claw.",
+          "Then random, equal chance. Never the same move twice.",
+          "Roar only once per fight."
+        ]
+      }
+    ],
+    "scaling": "None, but Roar makes Rip and Tear hit for 21 while Vulnerable.",
+    "threat": [
+      "Unpredictable. After Roar, a Rip and Tear on you is the big hit to block."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "slithering_strangler",
+    "name": "Slithering Strangler",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Slithering_Strangler",
+    "hp": "53–55",
+    "hpAsc": {
+      "a": 8,
+      "v": "54–56"
+    },
+    "powers": [
+      {
+        "name": "Constrict (on you)",
+        "text": "While the Strangler is alive, take X damage at the end of your turn."
+      }
+    ],
+    "moves": [
+      {
+        "id": "constrict",
+        "name": "Constrict",
+        "intent": "debuff",
+        "text": "Applies 3 Constrict"
+      },
+      {
+        "id": "thwack",
+        "name": "Thwack",
+        "intent": "attack",
+        "text": "7 damage, gains 5 Block",
+        "asc": {
+          "a": 8,
+          "v": "8 damage"
+        }
+      },
+      {
+        "id": "lash",
+        "name": "Lash",
+        "intent": "attack",
+        "text": "12 damage",
+        "asc": {
+          "a": 8,
+          "v": "13 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "constrict"
+        ],
+        "random": [
+          {
+            "move": "thwack",
+            "w": 50
+          },
+          {
+            "move": "lash",
+            "w": 50
+          }
+        ],
+        "rules": [
+          "Opens with Constrict.",
+          "Then: random Thwack or Lash (50/50, can repeat), then Constrict again, and so on.",
+          "So Constrict lands every other turn: turns 1, 3, 5…"
+        ]
+      }
+    ],
+    "scaling": "+3 Constrict every other turn (if Constrict stacks — not confirmed).",
+    "threat": [
+      "End-of-turn damage you cannot block the normal way while it lives."
+    ],
+    "tips": {
+      "general": [
+        "Constrict ends when the Strangler dies — it is usually the priority target."
+      ]
+    },
+    "confidence": "wiki"
+  },
+  {
+    "id": "vine_shambler",
+    "name": "Vine Shambler",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Vine_Shambler",
+    "hp": "61",
+    "hpAsc": {
+      "a": 8,
+      "v": "64"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "swipe",
+        "name": "Swipe",
+        "intent": "attack",
+        "text": "6 × 2 damage",
+        "asc": {
+          "a": 8,
+          "v": "7 × 2"
+        }
+      },
+      {
+        "id": "vines",
+        "name": "Grasping Vines",
+        "intent": "attack",
+        "text": "8 damage, applies 1 Tangled",
+        "asc": {
+          "a": 8,
+          "v": "9 damage"
+        }
+      },
+      {
+        "id": "chomp",
+        "name": "Chomp",
+        "intent": "attack",
+        "text": "16 damage",
+        "asc": {
+          "a": 8,
+          "v": "18 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "swipe",
+          "vines",
+          "chomp"
+        ],
+        "rules": [
+          "Fixed order, repeating."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "Tangled makes playing cards cost more (the wiki suggests Attacks; check the tooltip). Chomp (16) follows the Tangled turn."
+    ],
+    "tips": {
+      "silent": [
+        "The wiki notes non-Attack damage such as Deadly Poison gets around Tangled."
+      ],
+      "ironclad": [
+        "The wiki notes non-Attack damage such as Inferno gets around Tangled."
+      ],
+      "defect": [
+        "Orb damage is not an Attack card, so Tangled should not affect it."
+      ]
+    },
+    "confidence": "check",
+    "checkNote": "Exact Tangled wording not found on the wiki."
+  },
+  {
+    "id": "cubex_construct",
+    "name": "Cubex Construct",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Cubex_Construct",
+    "hp": "65",
+    "hpAsc": {
+      "a": 8,
+      "v": "70"
+    },
+    "powers": [
+      {
+        "name": "Artifact 1",
+        "text": "Negates the next debuff applied to it."
+      }
+    ],
+    "moves": [
+      {
+        "id": "charge",
+        "name": "Charge Up",
+        "intent": "buff",
+        "text": "Gains 2 Strength"
+      },
+      {
+        "id": "repeater",
+        "name": "Repeater Blast",
+        "intent": "attack",
+        "text": "7 damage, gains 2 Strength",
+        "asc": {
+          "a": 9,
+          "v": "8 damage"
+        }
+      },
+      {
+        "id": "expel",
+        "name": "Expel Blast",
+        "intent": "attack",
+        "text": "5 × 2 damage",
+        "asc": {
+          "a": 9,
+          "v": "6 × 2"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "charge"
+        ],
+        "cycle": [
+          "repeater",
+          "repeater",
+          "expel"
+        ],
+        "rules": [
+          "Opens with Charge Up, then Repeater, Repeater, Expel, repeating."
+        ]
+      }
+    ],
+    "scaling": "+2 Strength on turn 1 and every Repeater Blast: about +4 per 3-turn cycle.",
+    "threat": [
+      "A race. Its first debuff is blocked by Artifact."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "axe_raider",
+    "name": "Axe Raider",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Ruby_Raiders",
+    "hp": "20–22",
+    "hpAsc": {
+      "a": 8,
+      "v": "21–23"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "swing",
+        "name": "Swing",
+        "intent": "attack",
+        "text": "5 damage, gains 5 Block",
+        "asc": {
+          "a": 8,
+          "v": "6 damage, 6 Block"
+        }
+      },
+      {
+        "id": "big",
+        "name": "Big Swing",
+        "intent": "attack",
+        "text": "12 damage",
+        "asc": {
+          "a": 8,
+          "v": "13 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "swing",
+          "swing",
+          "big"
+        ],
+        "rules": [
+          "Fixed order, repeating."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "Big Swing every third turn (turns 3, 6, 9)."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "assassin_raider",
+    "name": "Assassin Raider",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Ruby_Raiders",
+    "hp": "18–23",
+    "hpAsc": {
+      "a": 8,
+      "v": "19–24"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "kill",
+        "name": "Killshot",
+        "intent": "attack",
+        "text": "10 damage",
+        "asc": {
+          "a": 8,
+          "v": "11 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "kill"
+        ],
+        "rules": [
+          "Killshot every turn."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "Most damage per turn for its HP among the raiders."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "brute_raider",
+    "name": "Brute Raider",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Ruby_Raiders",
+    "hp": "30–33",
+    "hpAsc": {
+      "a": 8,
+      "v": "31–34"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "beat",
+        "name": "Beat",
+        "intent": "attack",
+        "text": "7 damage",
+        "asc": {
+          "a": 8,
+          "v": "8 damage"
+        }
+      },
+      {
+        "id": "clap",
+        "name": "Clap",
+        "intent": "buff",
+        "text": "Gains 3 Strength"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "beat",
+          "clap"
+        ],
+        "rules": [
+          "Alternates, starting with Beat."
+        ]
+      }
+    ],
+    "scaling": "+3 Strength every other turn: Beat 7 → 10 → 13…",
+    "threat": [
+      "Highest HP raider and the only one that scales."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "crossbow_raider",
+    "name": "Crossbow Raider",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Ruby_Raiders",
+    "hp": "18–21",
+    "hpAsc": {
+      "a": 8,
+      "v": "19–22"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "reload",
+        "name": "Reload",
+        "intent": "block",
+        "text": "Gains 3 Block"
+      },
+      {
+        "id": "fire",
+        "name": "Fire!",
+        "intent": "attack",
+        "text": "14 damage",
+        "asc": {
+          "a": 8,
+          "v": "16 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "reload",
+          "fire"
+        ],
+        "rules": [
+          "Alternates, starting with Reload."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "14 on turns 2, 4, 6. Killing it on turn 1 removes the first big hit."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "tracker_raider",
+    "name": "Tracker Raider",
+    "kind": "hallway",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Ruby_Raiders",
+    "hp": "21–25",
+    "hpAsc": {
+      "a": 8,
+      "v": "22–26"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "track",
+        "name": "Track",
+        "intent": "debuff",
+        "text": "Applies 2 Frail"
+      },
+      {
+        "id": "hounds",
+        "name": "Unleash the Hounds",
+        "intent": "attack",
+        "text": "1 × 8 damage",
+        "asc": {
+          "a": 8,
+          "v": "1 × 9"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "track"
+        ],
+        "cycle": [
+          "hounds"
+        ],
+        "rules": [
+          "Opens with Track, then Unleash the Hounds every turn."
+        ]
+      }
+    ],
+    "scaling": "Each Strength it gains adds 8 damage (8 hits).",
+    "threat": [
+      "Many small hits: Thorns-style effects punish it; flat damage reduction helps a lot."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "wriggler",
+    "name": "Wriggler",
+    "kind": "minion",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Phrog_Parasite",
+    "hp": "17–21",
+    "hpAsc": {
+      "a": 8,
+      "v": "18–22"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "bite",
+        "name": "Nasty Bite",
+        "intent": "attack",
+        "text": "6 damage",
+        "asc": {
+          "a": 8,
+          "v": "7 damage"
+        }
+      },
+      {
+        "id": "wriggle",
+        "name": "Wriggle",
+        "intent": "buff",
+        "text": "Shuffles 1 Infection into your discard pile, gains 2 Strength"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "bite",
+          "wriggle"
+        ],
+        "rules": [
+          "Alternates.",
+          "Odd-numbered Wrigglers start with Nasty Bite; even-numbered with Wriggle.",
+          "From Phrog Parasite: spawn stunned and do nothing on their first turn.",
+          "Dense Vegetation event: start awake."
+        ]
+      }
+    ],
+    "scaling": "+2 Strength every other turn each.",
+    "threat": [
+      "Four at once; each adds Infection."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "bygone_effigy",
+    "name": "Bygone Effigy",
+    "kind": "elite",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Bygone_Effigy",
+    "hp": "127",
+    "hpAsc": {
+      "a": 8,
+      "v": "132"
+    },
+    "powers": [
+      {
+        "name": "Slow",
+        "text": "Whenever you play a card, it takes 10% more damage from Attacks this turn."
+      }
+    ],
+    "moves": [
+      {
+        "id": "sleep",
+        "name": "Sleep",
+        "intent": "sleep",
+        "text": "Does nothing"
+      },
+      {
+        "id": "wake",
+        "name": "Wake",
+        "intent": "buff",
+        "text": "Gains 10 Strength"
+      },
+      {
+        "id": "slashes",
+        "name": "Slashes",
+        "intent": "attack",
+        "text": "13 damage (23 with the 10 Strength)",
+        "asc": {
+          "a": 9,
+          "v": "15 (25 with Strength)"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "sleep",
+          "wake"
+        ],
+        "cycle": [
+          "slashes"
+        ],
+        "rules": [
+          "Turn 1 Sleep, turn 2 Wake, then Slashes every turn."
+        ]
+      }
+    ],
+    "scaling": "One-off +10 Strength on turn 2.",
+    "threat": [
+      "Two free turns, then 23 damage every turn from turn 3.",
+      "Slow rewards playing many cards in a turn before your big Attack. Rounds down."
+    ],
+    "tips": {
+      "general": [
+        "The damage you do on turns 1–2 decides the fight."
+      ],
+      "silent": [
+        "Cheap cards and Shivs stack Slow fast. Poison does not benefit from Slow."
+      ],
+      "defect": [
+        "Orb damage does not benefit from Slow (not an Attack)."
+      ],
+      "necrobinder": [
+        "Doom does not benefit from Slow (not an Attack)."
+      ]
+    },
+    "confidence": "wiki"
+  },
+  {
+    "id": "byrdonis",
+    "name": "Byrdonis",
+    "kind": "elite",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Byrdonis",
+    "hp": "81–84",
+    "hpAsc": {
+      "a": 8,
+      "v": "90"
+    },
+    "powers": [
+      {
+        "name": "Territorial 1",
+        "text": "At the end of its turn, gains 1 Strength."
+      }
+    ],
+    "moves": [
+      {
+        "id": "swoop",
+        "name": "Swoop",
+        "intent": "attack",
+        "text": "17 damage",
+        "asc": {
+          "a": 9,
+          "v": "19 damage"
+        }
+      },
+      {
+        "id": "peck",
+        "name": "Peck",
+        "intent": "attack",
+        "text": "3 × 3 damage",
+        "asc": {
+          "a": 9,
+          "v": "4 × 3"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "swoop",
+          "peck"
+        ],
+        "rules": [
+          "Alternates, starting with Swoop.",
+          "Wiki wording is ambiguous (\"Swoop → Peck → Swoop\") — confirm in game."
+        ]
+      }
+    ],
+    "scaling": "+1 Strength every turn. Peck gains 3 damage per Strength (3 hits).",
+    "threat": [
+      "Pure race: attacks every turn and gets stronger every turn."
+    ],
+    "tips": {},
+    "confidence": "check",
+    "checkNote": "Exact Swoop/Peck order."
+  },
+  {
+    "id": "phrog_parasite",
+    "name": "Phrog Parasite",
+    "kind": "elite",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Phrog_Parasite",
+    "hp": "61–64",
+    "hpAsc": {
+      "a": 8,
+      "v": "66–68"
+    },
+    "powers": [
+      {
+        "name": "Infested",
+        "text": "On death, summons 4 Wrigglers. They spawn stunned and do nothing on their first turn."
+      }
+    ],
+    "moves": [
+      {
+        "id": "infect",
+        "name": "Infect",
+        "intent": "status",
+        "text": "Shuffles 3 Infection into your discard pile"
+      },
+      {
+        "id": "lash",
+        "name": "Lash",
+        "intent": "attack",
+        "text": "4 × 4 damage",
+        "asc": {
+          "a": 8,
+          "v": "5 × 4"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Phrog alive",
+        "opener": [],
+        "cycle": [
+          "infect",
+          "lash"
+        ],
+        "rules": [
+          "Alternates, starting with Infect.",
+          "When it dies, 4 Wrigglers appear (see Wriggler)."
+        ]
+      }
+    ],
+    "scaling": "None itself; the Wrigglers gain Strength.",
+    "threat": [
+      "Two fights in one: killing the Phrog starts a 4-enemy fight.",
+      "Infection (unplayable): take 3 damage at end of turn if it is in your hand."
+    ],
+    "tips": {
+      "general": [
+        "Area damage is worth more here than anywhere else in the act.",
+        "The Wrigglers' stunned turn is a free turn to set up."
+      ],
+      "ironclad": [
+        "Exhaust removes Infection permanently for the fight."
+      ],
+      "silent": [
+        "Discard moves Infection out of your hand before end of turn."
+      ]
+    },
+    "confidence": "wiki",
+    "companions": [
+      "wriggler"
+    ]
+  },
+  {
+    "id": "ceremonial_beast",
+    "name": "Ceremonial Beast",
+    "kind": "boss",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Ceremonial_Beast",
+    "hp": "252",
+    "hpAsc": {
+      "a": 8,
+      "v": "262"
+    },
+    "powers": [
+      {
+        "name": "Plow (after Stamp)",
+        "text": "When its HP drops to 150 (160 at A9), it is Stunned and loses all Strength."
+      }
+    ],
+    "moves": [
+      {
+        "id": "stamp",
+        "name": "Stamp",
+        "intent": "buff",
+        "text": "Gains Plow 150",
+        "asc": {
+          "a": 9,
+          "v": "Plow 160"
+        }
+      },
+      {
+        "id": "plow",
+        "name": "Plow",
+        "intent": "attack",
+        "text": "18 damage, gains 2 Strength",
+        "asc": {
+          "a": 9,
+          "v": "20 damage"
+        }
+      },
+      {
+        "id": "stun",
+        "name": "Stun",
+        "intent": "stun",
+        "text": "Stunned. Does nothing."
+      },
+      {
+        "id": "cry",
+        "name": "Beast Cry",
+        "intent": "debuff",
+        "text": "Applies 1 Ringing"
+      },
+      {
+        "id": "stomp",
+        "name": "Stomp",
+        "intent": "attack",
+        "text": "15 damage",
+        "asc": {
+          "a": 9,
+          "v": "17 damage"
+        }
+      },
+      {
+        "id": "crush",
+        "name": "Crush",
+        "intent": "attack",
+        "text": "17 damage, gains 3 Strength",
+        "asc": {
+          "a": 9,
+          "v": "19 damage, 4 Strength"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Phase 1",
+        "opener": [
+          "stamp"
+        ],
+        "cycle": [
+          "plow"
+        ],
+        "rules": [
+          "Turn 1 Stamp, then Plow every turn."
+        ]
+      },
+      {
+        "name": "Phase 2 (HP ≤ 150)",
+        "trigger": "HP drops to the Plow threshold",
+        "opener": [
+          "stun"
+        ],
+        "cycle": [
+          "cry",
+          "stomp",
+          "crush"
+        ],
+        "rules": [
+          "Stunned (loses all Strength), then Beast Cry, Stomp, Crush, repeating."
+        ]
+      }
+    ],
+    "scaling": "Phase 1: +2 Strength per Plow (18, 20, 22…). Phase 2: +3 Strength per Crush.",
+    "threat": [
+      "You need 102 damage (252 → 150) to trigger the stun; the longer that takes, the harder Plow hits.",
+      "Crossing the threshold resets its Strength and gives a free turn."
+    ],
+    "tips": {
+      "general": [
+        "Ringing: effect not confirmed from the wiki — check the tooltip."
+      ],
+      "regent": [
+        "Big single hits are good for crossing the 150 threshold on your terms."
+      ]
+    },
+    "confidence": "wiki"
+  },
+  {
+    "id": "kin_priest",
+    "name": "The Kin (Kin Priest)",
+    "kind": "boss",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "The_Kin",
+    "hp": "190",
+    "hpAsc": {
+      "a": 8,
+      "v": "199"
+    },
+    "companions": [
+      "kin_follower"
+    ],
+    "powers": [],
+    "moves": [
+      {
+        "id": "frail_orb",
+        "name": "Orb of Frailty",
+        "intent": "attack",
+        "text": "8 damage, applies 1 Frail",
+        "asc": {
+          "a": 8,
+          "v": "9 damage"
+        }
+      },
+      {
+        "id": "weak_orb",
+        "name": "Orb of Weakness",
+        "intent": "attack",
+        "text": "8 damage, applies 1 Weak",
+        "asc": {
+          "a": 8,
+          "v": "9 damage"
+        }
+      },
+      {
+        "id": "beam",
+        "name": "Soul Beam",
+        "intent": "attack",
+        "text": "3 × 3 damage"
+      },
+      {
+        "id": "ritual",
+        "name": "Dark Ritual",
+        "intent": "buff",
+        "text": "Gains 2 Strength",
+        "asc": {
+          "a": 8,
+          "v": "3 Strength"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "frail_orb",
+          "weak_orb",
+          "beam",
+          "ritual"
+        ],
+        "rules": [
+          "Fixed order, repeating. Fights alongside 2 Kin Followers."
+        ]
+      }
+    ],
+    "scaling": "Priest +2 Strength every 4 turns; each Follower +2 every 3 turns.",
+    "threat": [
+      "Three enemies. The Followers are Minions: they leave when the Priest dies.",
+      "Killing the Priest ends the fight; Followers have 58–59 HP each."
+    ],
+    "tips": {
+      "general": [
+        "Choice to weigh: focus the Priest (ends everything) or reduce incoming damage by killing Followers first."
+      ]
+    },
+    "confidence": "wiki"
+  },
+  {
+    "id": "kin_follower",
+    "name": "Kin Follower",
+    "kind": "minion",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "The_Kin",
+    "hp": "58–59",
+    "hpAsc": {
+      "a": 8,
+      "v": "62–63"
+    },
+    "powers": [
+      {
+        "name": "Minion",
+        "text": "Leaves combat when its leader dies."
+      }
+    ],
+    "moves": [
+      {
+        "id": "slash",
+        "name": "Quick Slash",
+        "intent": "attack",
+        "text": "5 damage"
+      },
+      {
+        "id": "boomerang",
+        "name": "Boomerang",
+        "intent": "attack",
+        "text": "2 × 2 damage"
+      },
+      {
+        "id": "dance",
+        "name": "Power Dance",
+        "intent": "buff",
+        "text": "Gains 2 Strength",
+        "asc": {
+          "a": 8,
+          "v": "3 Strength"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "slash",
+          "boomerang",
+          "dance"
+        ],
+        "rules": [
+          "Fixed order. The two Followers are offset."
+        ]
+      }
+    ],
+    "starts": [
+      {
+        "label": "Follower A",
+        "at": "slash"
+      },
+      {
+        "label": "Follower B",
+        "at": "dance"
+      }
+    ],
+    "scaling": "+2 Strength every 3 turns.",
+    "threat": [
+      "Low damage alone; their Strength adds up in a long fight."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "vantom",
+    "name": "Vantom",
+    "kind": "boss",
+    "maps": [
+      "overgrowth"
+    ],
+    "wiki": "Vantom",
+    "hp": "173",
+    "hpAsc": {
+      "a": 8,
+      "v": "183"
+    },
+    "powers": [
+      {
+        "name": "Slippery 9",
+        "text": "The next 9 times it loses HP, it only loses 1 HP instead. The wiki says each hit uses up a stack even if fully blocked."
+      }
+    ],
+    "moves": [
+      {
+        "id": "blot",
+        "name": "Ink Blot",
+        "intent": "attack",
+        "text": "7 damage",
+        "asc": {
+          "a": 8,
+          "v": "8 damage"
+        }
+      },
+      {
+        "id": "lance",
+        "name": "Inky Lance",
+        "intent": "attack",
+        "text": "6 × 2 damage",
+        "asc": {
+          "a": 8,
+          "v": "7 × 2"
+        }
+      },
+      {
+        "id": "dismember",
+        "name": "Dismember",
+        "intent": "attack",
+        "text": "27 damage, shuffles 3 Wounds into your discard pile",
+        "asc": {
+          "a": 8,
+          "v": "30 damage"
+        }
+      },
+      {
+        "id": "prepare",
+        "name": "Prepare",
+        "intent": "buff",
+        "text": "Gains 2 Strength"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "blot",
+          "lance",
+          "dismember",
+          "prepare"
+        ],
+        "rules": [
+          "Fixed order, repeating."
+        ]
+      }
+    ],
+    "scaling": "+2 Strength every 4th turn.",
+    "threat": [
+      "Dismember lands on turns 3, 7, 11 — the big Block turns.",
+      "Slippery absorbs your first 9 hits. Many small hits strip it; a big hit early is mostly wasted."
+    ],
+    "tips": {
+      "silent": [
+        "Shivs strip Slippery quickly."
+      ],
+      "defect": [
+        "Lightning passives strip Slippery between your attacks."
+      ],
+      "regent": [
+        "Strip Slippery before committing a big Sovereign Blade hit."
+      ],
+      "ironclad": [
+        "Exhaust clears the Wounds from Dismember."
+      ]
+    },
+    "confidence": "check",
+    "checkNote": "Wiki text says 'Slippery 9 (8 at lower Ascensions)' — the ascension split looks wrong; confirm the number in game."
+  },
+  {
+    "id": "corpse_slug",
+    "name": "Corpse Slug",
+    "kind": "hallway",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Corpse_Slug",
+    "hp": "25–27",
+    "hpAsc": {
+      "a": 8,
+      "v": "27–29"
+    },
+    "powers": [
+      {
+        "name": "Ravenous 4",
+        "text": "When another enemy dies, it eats it: becomes Stunned and gains 4 Strength (5 at A9)."
+      }
+    ],
+    "moves": [
+      {
+        "id": "whip",
+        "name": "Whip Slap",
+        "intent": "attack",
+        "text": "3 × 2 damage"
+      },
+      {
+        "id": "glomp",
+        "name": "Glomp",
+        "intent": "attack",
+        "text": "8 damage",
+        "asc": {
+          "a": 9,
+          "v": "9 damage"
+        }
+      },
+      {
+        "id": "goop",
+        "name": "Goop",
+        "intent": "debuff",
+        "text": "Applies 2 Frail"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "whip",
+          "glomp",
+          "goop"
+        ],
+        "rules": [
+          "Fixed order. Each slug starts on a different move."
+        ]
+      }
+    ],
+    "starts": [
+      {
+        "label": "Starts Whip Slap",
+        "at": "whip"
+      },
+      {
+        "label": "Starts Glomp",
+        "at": "glomp"
+      },
+      {
+        "label": "Starts Goop",
+        "at": "goop"
+      }
+    ],
+    "scaling": "+4 Strength each time a slug eats a dead ally.",
+    "threat": [
+      "Killing one slug buffs the others (but stuns them for a turn)."
+    ],
+    "tips": {
+      "general": [
+        "Spreading damage and killing slugs on the same turn limits Ravenous stacking."
+      ]
+    },
+    "confidence": "wiki"
+  },
+  {
+    "id": "seapunk",
+    "name": "Seapunk",
+    "kind": "hallway",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Seapunk",
+    "hp": "44–46",
+    "hpAsc": {
+      "a": 8,
+      "v": "47–49"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "kick",
+        "name": "Sea Kick",
+        "intent": "attack",
+        "text": "11 damage",
+        "asc": {
+          "a": 9,
+          "v": "13 damage"
+        }
+      },
+      {
+        "id": "spin",
+        "name": "Spinning Kick",
+        "intent": "attack",
+        "text": "2 × 4 damage"
+      },
+      {
+        "id": "burp",
+        "name": "Bubble Burp",
+        "intent": "block",
+        "text": "Gains 7 Block and 1 Strength",
+        "asc": {
+          "a": 9,
+          "v": "8 Block, 2 Strength"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "kick",
+          "spin",
+          "burp"
+        ],
+        "rules": [
+          "Fixed order, repeating."
+        ]
+      }
+    ],
+    "scaling": "+1 Strength every 3 turns (Spinning Kick gains 4 per Strength).",
+    "threat": [
+      "Steady; Spinning Kick grows fastest with Strength."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "sludge_spinner",
+    "name": "Sludge Spinner",
+    "kind": "hallway",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Sludge_Spinner",
+    "hp": "37–39",
+    "hpAsc": {
+      "a": 8,
+      "v": "41–42"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "spray",
+        "name": "Oil Spray",
+        "intent": "attack",
+        "text": "8 damage, applies 1 Weak",
+        "asc": {
+          "a": 8,
+          "v": "9 damage"
+        }
+      },
+      {
+        "id": "slam",
+        "name": "Slam",
+        "intent": "attack",
+        "text": "11 damage",
+        "asc": {
+          "a": 8,
+          "v": "12 damage"
+        }
+      },
+      {
+        "id": "rage",
+        "name": "Rage",
+        "intent": "attack",
+        "text": "6 damage, gains 3 Strength",
+        "asc": {
+          "a": 8,
+          "v": "7 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "spray"
+        ],
+        "random": [
+          {
+            "move": "spray",
+            "w": 33
+          },
+          {
+            "move": "slam",
+            "w": 33
+          },
+          {
+            "move": "rage",
+            "w": 33
+          }
+        ],
+        "rules": [
+          "Opens with Oil Spray.",
+          "Then random. Never the same move twice."
+        ]
+      }
+    ],
+    "scaling": "+3 Strength per Rage.",
+    "threat": [
+      "Attacks every turn; Weak reduces your damage."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "toadpole",
+    "name": "Toadpole",
+    "kind": "hallway",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Toadpole",
+    "hp": "21–25",
+    "hpAsc": {
+      "a": 8,
+      "v": "22–26"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "whirl",
+        "name": "Whirl",
+        "intent": "attack",
+        "text": "7 damage",
+        "asc": {
+          "a": 8,
+          "v": "8 damage"
+        }
+      },
+      {
+        "id": "spiken",
+        "name": "Spiken",
+        "intent": "buff",
+        "text": "Gains 2 Thorns"
+      },
+      {
+        "id": "spit",
+        "name": "Spike Spit",
+        "intent": "attack",
+        "text": "3 × 3 damage, removes 2 Thorns from self",
+        "asc": {
+          "a": 8,
+          "v": "4 × 3"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "whirl",
+          "spiken",
+          "spit"
+        ],
+        "rules": [
+          "Fixed order. In the weak encounter the front Toadpole starts with Spiken."
+        ]
+      }
+    ],
+    "starts": [
+      {
+        "label": "Back (Whirl)",
+        "at": "whirl"
+      },
+      {
+        "label": "Front (Spiken)",
+        "at": "spiken"
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "Thorns: attacking it after Spiken costs you HP per hit. Multi-hit attacks are worst then."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "calcified_cultist",
+    "name": "Calcified Cultist",
+    "kind": "hallway",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Cultists",
+    "hp": "38–41",
+    "hpAsc": {
+      "a": 8,
+      "v": "39–42"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "incant",
+        "name": "Incantation",
+        "intent": "buff",
+        "text": "Gains 2 Ritual (Strength each turn)"
+      },
+      {
+        "id": "strike",
+        "name": "Dark Strike",
+        "intent": "attack",
+        "text": "9 damage",
+        "asc": {
+          "a": 8,
+          "v": "11 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "incant"
+        ],
+        "cycle": [
+          "strike"
+        ],
+        "rules": [
+          "Incantation, then Dark Strike every turn. No Strength on the Incantation turn."
+        ]
+      }
+    ],
+    "scaling": "+2 Strength every turn after turn 1.",
+    "threat": [
+      "Clock enemy: every turn alive is +2 damage."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "damp_cultist",
+    "name": "Damp Cultist",
+    "kind": "hallway",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Cultists",
+    "hp": "51–53",
+    "hpAsc": {
+      "a": 8,
+      "v": "52–54"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "incant",
+        "name": "Incantation",
+        "intent": "buff",
+        "text": "Gains 5 Ritual (Strength each turn)"
+      },
+      {
+        "id": "strike",
+        "name": "Dark Strike",
+        "intent": "attack",
+        "text": "1 damage"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "incant"
+        ],
+        "cycle": [
+          "strike"
+        ],
+        "rules": [
+          "Incantation, then Dark Strike every turn. No Strength on the Incantation turn."
+        ]
+      }
+    ],
+    "scaling": "+5 Strength every turn: roughly 1 → 6 → 11 → 16…",
+    "threat": [
+      "Starts harmless, overtakes the Calcified Cultist around turn 4."
+    ],
+    "tips": {},
+    "confidence": "check",
+    "checkNote": "Ascension values unreadable on the wiki; base values look right."
+  },
+  {
+    "id": "living_fog",
+    "name": "Living Fog",
+    "kind": "hallway",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Living_Fog",
+    "hp": "80",
+    "hpAsc": {
+      "a": 8,
+      "v": "82"
+    },
+    "powers": [
+      {
+        "name": "Smoggy (on you)",
+        "text": "You can only play 1 Skill per turn."
+      }
+    ],
+    "moves": [
+      {
+        "id": "gas",
+        "name": "Advanced Gas",
+        "intent": "attack",
+        "text": "8 damage, applies 1 Smoggy",
+        "asc": {
+          "a": 8,
+          "v": "9 damage"
+        }
+      },
+      {
+        "id": "bloat",
+        "name": "Bloat",
+        "intent": "summon",
+        "text": "5 damage, summons 1 Gas Bomb",
+        "asc": {
+          "a": 8,
+          "v": "6 damage"
+        }
+      },
+      {
+        "id": "blast",
+        "name": "Super Gas Blast",
+        "intent": "attack",
+        "text": "8 damage",
+        "asc": {
+          "a": 8,
+          "v": "9 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "gas"
+        ],
+        "cycle": [
+          "bloat",
+          "blast"
+        ],
+        "rules": [
+          "Advanced Gas, then alternates Bloat / Super Gas Blast."
+        ]
+      }
+    ],
+    "scaling": "A new Gas Bomb every other turn.",
+    "threat": [
+      "Smoggy limits you to 1 Skill a turn — Block-heavy hands suffer.",
+      "Gas Bombs explode for 8 the turn after they appear unless killed."
+    ],
+    "tips": {},
+    "confidence": "wiki",
+    "companions": [
+      "gas_bomb"
+    ]
+  },
+  {
+    "id": "gas_bomb",
+    "name": "Gas Bomb",
+    "kind": "minion",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Living_Fog",
+    "hp": "7",
+    "hpAsc": {
+      "a": 8,
+      "v": "8"
+    },
+    "powers": [
+      {
+        "name": "Minion",
+        "text": "Leaves combat when its leader dies."
+      }
+    ],
+    "moves": [
+      {
+        "id": "explode",
+        "name": "Explode",
+        "intent": "attack",
+        "text": "8 damage, then dies",
+        "asc": {
+          "a": 8,
+          "v": "9 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "explode"
+        ],
+        "rules": [
+          "Explodes on its turn."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "7 HP to stop 8 damage."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "fossil_stalker",
+    "name": "Fossil Stalker",
+    "kind": "hallway",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Fossil_Stalker",
+    "hp": "51–53",
+    "hpAsc": {
+      "a": 8,
+      "v": "54–56"
+    },
+    "powers": [
+      {
+        "name": "Suck 3",
+        "text": "Whenever it deals unblocked attack damage, it gains 3 Strength."
+      }
+    ],
+    "moves": [
+      {
+        "id": "latch",
+        "name": "Latch",
+        "intent": "attack",
+        "text": "12 damage",
+        "asc": {
+          "a": 9,
+          "v": "14 damage"
+        }
+      },
+      {
+        "id": "tackle",
+        "name": "Tackle",
+        "intent": "attack",
+        "text": "9 damage, applies 1 Frail",
+        "asc": {
+          "a": 9,
+          "v": "11 damage"
+        }
+      },
+      {
+        "id": "lash",
+        "name": "Lash",
+        "intent": "attack",
+        "text": "3 × 2 damage",
+        "asc": {
+          "a": 9,
+          "v": "4 × 2"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "latch"
+        ],
+        "random": [
+          {
+            "move": "latch",
+            "w": 33
+          },
+          {
+            "move": "tackle",
+            "w": 33
+          },
+          {
+            "move": "lash",
+            "w": 33
+          }
+        ],
+        "rules": [
+          "Opens with Latch.",
+          "Then random, equal chance. Can repeat."
+        ]
+      }
+    ],
+    "scaling": "+3 Strength per unblocked attack (possibly per unblocked hit — Lash hits twice).",
+    "threat": [
+      "Full Block matters more here than anywhere else in the act. Frail makes that harder."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "gremlin_merc",
+    "name": "Gremlin Merc",
+    "kind": "hallway",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Gremlin_Merc",
+    "hp": "47–49",
+    "hpAsc": {
+      "a": 8,
+      "v": "51–53"
+    },
+    "powers": [
+      {
+        "name": "Thievery 20",
+        "text": "Steals 20 Gold when attacking."
+      },
+      {
+        "name": "Surprise",
+        "text": "Summons Fat Gremlin and Sneaky Gremlin when it dies."
+      }
+    ],
+    "moves": [
+      {
+        "id": "gimme",
+        "name": "Gimme",
+        "intent": "attack",
+        "text": "7 × 2 damage",
+        "asc": {
+          "a": 8,
+          "v": "8 × 2"
+        }
+      },
+      {
+        "id": "smash",
+        "name": "Double Smash",
+        "intent": "attack",
+        "text": "6 × 2 damage, applies 2 Weak",
+        "asc": {
+          "a": 8,
+          "v": "7 × 2"
+        }
+      },
+      {
+        "id": "hehe",
+        "name": "Hehe",
+        "intent": "attack",
+        "text": "8 damage, gains 2 Strength",
+        "asc": {
+          "a": 8,
+          "v": "9 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Merc alive",
+        "opener": [],
+        "cycle": [
+          "gimme",
+          "smash",
+          "hehe"
+        ],
+        "rules": [
+          "Fixed order, repeating."
+        ]
+      }
+    ],
+    "scaling": "+2 Strength every 3 turns.",
+    "threat": [
+      "Every attack steals Gold. The Fat Gremlin carries it and flees — kill it to get the Gold back."
+    ],
+    "tips": {},
+    "confidence": "wiki",
+    "companions": [
+      "fat_gremlin",
+      "sneaky_gremlin"
+    ]
+  },
+  {
+    "id": "fat_gremlin",
+    "name": "Fat Gremlin",
+    "kind": "minion",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Gremlin_Merc",
+    "hp": "13–17",
+    "hpAsc": {
+      "a": 8,
+      "v": "14–18"
+    },
+    "powers": [
+      {
+        "name": "Heist",
+        "text": "When killed, returns all the stolen Gold."
+      }
+    ],
+    "moves": [
+      {
+        "id": "spawned",
+        "name": "Spawned",
+        "intent": "none",
+        "text": "Does nothing"
+      },
+      {
+        "id": "flee",
+        "name": "Flee",
+        "intent": "escape",
+        "text": "Escapes with the stolen Gold"
+      }
+    ],
+    "phases": [
+      {
+        "name": "After Merc dies",
+        "opener": [
+          "spawned"
+        ],
+        "cycle": [
+          "flee"
+        ],
+        "rules": [
+          "One turn to kill it before it flees."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "You have one turn to get your Gold back."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "sneaky_gremlin",
+    "name": "Sneaky Gremlin",
+    "kind": "minion",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Gremlin_Merc",
+    "hp": "10–14",
+    "hpAsc": {
+      "a": 8,
+      "v": "11–15"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "spawned",
+        "name": "Spawned",
+        "intent": "none",
+        "text": "Does nothing"
+      },
+      {
+        "id": "tackle",
+        "name": "Tackle",
+        "intent": "attack",
+        "text": "9 damage",
+        "asc": {
+          "a": 8,
+          "v": "10 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "After Merc dies",
+        "opener": [
+          "spawned"
+        ],
+        "cycle": [
+          "tackle"
+        ],
+        "rules": [
+          "Idle first turn, then Tackle every turn."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "Competes with the Fat Gremlin for your damage on the free turn."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "haunted_ship",
+    "name": "Haunted Ship",
+    "kind": "hallway",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Haunted_Ship",
+    "hp": "63",
+    "hpAsc": {
+      "a": 8,
+      "v": "67"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "haunt",
+        "name": "Haunt",
+        "intent": "status",
+        "text": "Shuffles 5 Dazed into your discard pile, applies 3 Weak"
+      },
+      {
+        "id": "swipe",
+        "name": "Swipe",
+        "intent": "attack",
+        "text": "13 damage",
+        "asc": {
+          "a": 9,
+          "v": "14 damage"
+        }
+      },
+      {
+        "id": "stomp",
+        "name": "Stomp",
+        "intent": "attack",
+        "text": "4 × 3 damage",
+        "asc": {
+          "a": 9,
+          "v": "5 × 3"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "haunt"
+        ],
+        "cycle": [
+          "swipe",
+          "stomp"
+        ],
+        "rules": [
+          "Haunt, then alternates Swipe / Stomp."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "5 Dazed and 3 Weak up front slow your damage for the rest of the fight."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "punch_construct",
+    "name": "Punch Construct",
+    "kind": "hallway",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Punch_Construct",
+    "hp": "55",
+    "hpAsc": {
+      "a": 8,
+      "v": "60"
+    },
+    "powers": [
+      {
+        "name": "Artifact 1",
+        "text": "Negates the next debuff applied to it."
+      }
+    ],
+    "moves": [
+      {
+        "id": "ready",
+        "name": "READY",
+        "intent": "block",
+        "text": "Gains 10 Block"
+      },
+      {
+        "id": "fast",
+        "name": "Fast Punch",
+        "intent": "attack",
+        "text": "5 × 2 damage, applies 1 Frail",
+        "asc": {
+          "a": 9,
+          "v": "6 × 2"
+        }
+      },
+      {
+        "id": "strong",
+        "name": "Strong Punch",
+        "intent": "attack",
+        "text": "14 damage",
+        "asc": {
+          "a": 9,
+          "v": "16 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "ready",
+          "fast",
+          "strong"
+        ],
+        "rules": [
+          "Fixed order, repeating."
+        ]
+      }
+    ],
+    "scaling": "None.",
+    "threat": [
+      "Frail on turn 2, then 14 on turn 3 — your Block is weakest when the big hit lands."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "sewer_clam",
+    "name": "Sewer Clam",
+    "kind": "hallway",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Sewer_Clam",
+    "hp": "56",
+    "hpAsc": {
+      "a": 8,
+      "v": "58"
+    },
+    "powers": [
+      {
+        "name": "Plating 8",
+        "text": "Gains Block at end of its turn; Plating drops by 1 each turn. (9 at A8)"
+      }
+    ],
+    "moves": [
+      {
+        "id": "jet",
+        "name": "Jet",
+        "intent": "attack",
+        "text": "10 damage",
+        "asc": {
+          "a": 8,
+          "v": "11 damage"
+        }
+      },
+      {
+        "id": "pressurize",
+        "name": "Pressurize",
+        "intent": "buff",
+        "text": "Gains 4 Strength"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [
+          "jet"
+        ],
+        "cycle": [
+          "pressurize",
+          "jet"
+        ],
+        "rules": [
+          "Jet, then alternates Pressurize / Jet."
+        ]
+      }
+    ],
+    "scaling": "+4 Strength every other turn: Jet 10 → 14 → 18…",
+    "threat": [
+      "Plating makes chip damage poor; fast scaling makes a long fight costly."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "two_tailed_rat",
+    "name": "Two-Tailed Rat",
+    "kind": "hallway",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Two-Tailed_Rat",
+    "hp": "17–21",
+    "hpAsc": {
+      "a": 8,
+      "v": "18–22"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "scratch",
+        "name": "Scratch",
+        "intent": "attack",
+        "text": "8 damage",
+        "asc": {
+          "a": 8,
+          "v": "9 damage"
+        }
+      },
+      {
+        "id": "bite",
+        "name": "Disease Bite",
+        "intent": "attack",
+        "text": "6 damage",
+        "asc": {
+          "a": 8,
+          "v": "9 damage"
+        }
+      },
+      {
+        "id": "screech",
+        "name": "Screech",
+        "intent": "debuff",
+        "text": "Applies 1 Frail"
+      },
+      {
+        "id": "backup",
+        "name": "Call for Backup",
+        "intent": "summon",
+        "text": "Summons another Two-Tailed Rat"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "random": [
+          {
+            "move": "scratch",
+            "w": 33
+          },
+          {
+            "move": "bite",
+            "w": 33
+          },
+          {
+            "move": "screech",
+            "w": 33
+          }
+        ],
+        "rules": [
+          "Turn 1: one rat each uses Scratch, Disease Bite, Screech.",
+          "Then random. Never the same move twice.",
+          "From turn 3, a rat may Call for Backup: each rat once, 3 summons max in total."
+        ]
+      }
+    ],
+    "scaling": "Up to 3 extra rats.",
+    "threat": [
+      "Killing rats before turn 3 limits how many can summon."
+    ],
+    "tips": {},
+    "confidence": "wiki"
+  },
+  {
+    "id": "skulking_colony",
+    "name": "Skulking Colony",
+    "kind": "elite",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Skulking_Colony",
+    "hp": "75",
+    "hpAsc": {
+      "a": 8,
+      "v": "80"
+    },
+    "powers": [
+      {
+        "name": "Hardened Shell 20",
+        "text": "Cannot lose more than 20 HP each turn. Resets at the start of your turn and of its turn."
+      }
+    ],
+    "moves": [
+      {
+        "id": "zoom",
+        "name": "Zoom",
+        "intent": "attack",
+        "text": "14 damage",
+        "asc": {
+          "a": 9,
+          "v": "16 damage"
+        }
+      },
+      {
+        "id": "inertia",
+        "name": "Inertia",
+        "intent": "attack",
+        "text": "9 damage, gains 2 Strength",
+        "asc": {
+          "a": 9,
+          "v": "11 damage, 4 Strength"
+        }
+      },
+      {
+        "id": "stabs",
+        "name": "Piercing Stabs",
+        "intent": "attack",
+        "text": "7 × 2 damage",
+        "asc": {
+          "a": 9,
+          "v": "8 × 2"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "zoom",
+          "zoom",
+          "inertia",
+          "stabs"
+        ],
+        "rules": [
+          "Fixed order, repeating."
+        ]
+      }
+    ],
+    "scaling": "+2 Strength every 4 turns.",
+    "threat": [
+      "Minimum 4 turns to kill (75 HP ÷ 20 per turn) unless you have damage outside your turn.",
+      "It attacks every turn, so this is a Block check more than a damage check."
+    ],
+    "tips": {
+      "general": [
+        "Overkill in one turn is wasted — spread damage across turns."
+      ],
+      "silent": [
+        "The wiki notes Poison ticks on its turn, adding up to 20 more damage per round (40 total)."
+      ],
+      "regent": [
+        "A huge single hit is capped at 20 — it gains little here."
+      ]
+    },
+    "confidence": "wiki"
+  },
+  {
+    "id": "phantasmal_gardener",
+    "name": "Phantasmal Gardener (×4)",
+    "kind": "elite",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Phantasmal_Gardener",
+    "hp": "26–31 each",
+    "hpAsc": {
+      "a": 8,
+      "v": "27–32 each"
+    },
+    "powers": [
+      {
+        "name": "Skittish 6",
+        "text": "The first time it is hit each turn, it gains 6 Block (7 at A8)."
+      }
+    ],
+    "moves": [
+      {
+        "id": "bite",
+        "name": "Bite",
+        "intent": "attack",
+        "text": "5 damage"
+      },
+      {
+        "id": "lash",
+        "name": "Lash",
+        "intent": "attack",
+        "text": "7 damage"
+      },
+      {
+        "id": "flail",
+        "name": "Flail",
+        "intent": "attack",
+        "text": "1 × 3 damage"
+      },
+      {
+        "id": "enlarge",
+        "name": "Enlarge",
+        "intent": "buff",
+        "text": "Gains 2 Strength",
+        "asc": {
+          "a": 8,
+          "v": "3 Strength"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "bite",
+          "lash",
+          "flail",
+          "enlarge"
+        ],
+        "rules": [
+          "All four share the cycle, offset by position (left to right)."
+        ]
+      }
+    ],
+    "starts": [
+      {
+        "label": "1st (left): Flail",
+        "at": "flail"
+      },
+      {
+        "label": "2nd: Bite",
+        "at": "bite"
+      },
+      {
+        "label": "3rd: Lash",
+        "at": "lash"
+      },
+      {
+        "label": "4th (right): Enlarge",
+        "at": "enlarge"
+      }
+    ],
+    "scaling": "Each gains +2 Strength every 4 turns.",
+    "threat": [
+      "Four enemies with small HP. Skittish means your first hit on each one per turn is partly blocked.",
+      "Skittish triggers after the first Attack resolves (between Replays)."
+    ],
+    "tips": {
+      "general": [
+        "Area damage hits all four but triggers Skittish on all four too — the follow-up hits do full damage."
+      ]
+    },
+    "confidence": "wiki"
+  },
+  {
+    "id": "terror_eel",
+    "name": "Terror Eel",
+    "kind": "elite",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Terror_Eel",
+    "hp": "140",
+    "hpAsc": {
+      "a": 8,
+      "v": "150"
+    },
+    "powers": [
+      {
+        "name": "Shriek 70",
+        "text": "When its HP drops to 70, it is Stunned, then uses Terror. (75 at A8)"
+      }
+    ],
+    "moves": [
+      {
+        "id": "crash",
+        "name": "Crash",
+        "intent": "attack",
+        "text": "16 damage",
+        "asc": {
+          "a": 9,
+          "v": "18 damage"
+        }
+      },
+      {
+        "id": "thrash",
+        "name": "Thrash",
+        "intent": "attack",
+        "text": "3 × 3 damage, gains 6 Vigor",
+        "asc": {
+          "a": 9,
+          "v": "4 × 3"
+        }
+      },
+      {
+        "id": "stun",
+        "name": "Stun",
+        "intent": "stun",
+        "text": "Stunned. Does nothing."
+      },
+      {
+        "id": "terror",
+        "name": "Terror",
+        "intent": "debuff",
+        "text": "Applies 99 Vulnerable to you"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Above 70 HP",
+        "opener": [],
+        "cycle": [
+          "crash",
+          "thrash"
+        ],
+        "rules": [
+          "Alternates, starting with Crash."
+        ]
+      },
+      {
+        "name": "After Shriek (≤ 70 HP)",
+        "trigger": "HP drops to 70",
+        "opener": [
+          "stun",
+          "terror"
+        ],
+        "cycle": [
+          "crash",
+          "thrash"
+        ],
+        "rules": [
+          "Stunned, then Terror (99 Vulnerable — +50% damage taken for the rest of the fight), then back to Crash / Thrash."
+        ]
+      }
+    ],
+    "scaling": "Vigor (next attack bonus) from Thrash makes the following Crash bigger.",
+    "threat": [
+      "After Terror, Crash hits for 24+ and you take 50% more from everything.",
+      "Stun and Terror are two enemy turns with no attack: that gives you two turns to deal the last 70 HP before the first Crash lands on 99 Vulnerable."
+    ],
+    "tips": {
+      "regent": [
+        "Big single hits help burst the second 70 HP."
+      ],
+      "necrobinder": [
+        "Doom stacked before the threshold can finish it after Terror."
+      ]
+    },
+    "confidence": "wiki"
+  },
+  {
+    "id": "waterfall_giant",
+    "name": "Waterfall Giant",
+    "kind": "boss",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Waterfall_Giant",
+    "hp": "240",
+    "hpAsc": {
+      "a": 8,
+      "v": "250"
+    },
+    "powers": [
+      {
+        "name": "Steam Eruption",
+        "text": "Stored steam. When it would die with Steam Eruption, it becomes invulnerable, then explodes for that amount next turn."
+      }
+    ],
+    "moves": [
+      {
+        "id": "pressurize",
+        "name": "Pressurize",
+        "intent": "buff",
+        "text": "Gains 15 Steam Eruption",
+        "asc": {
+          "a": 9,
+          "v": "20"
+        }
+      },
+      {
+        "id": "stomp",
+        "name": "Stomp",
+        "intent": "attack",
+        "text": "15 damage, applies 1 Weak, +3 Steam",
+        "asc": {
+          "a": 9,
+          "v": "16 damage"
+        }
+      },
+      {
+        "id": "ram",
+        "name": "Ram",
+        "intent": "attack",
+        "text": "10 damage, +3 Steam",
+        "asc": {
+          "a": 9,
+          "v": "11 damage"
+        }
+      },
+      {
+        "id": "siphon",
+        "name": "Siphon",
+        "intent": "heal",
+        "text": "Heals 10 HP, +3 Steam",
+        "asc": {
+          "a": 8,
+          "v": "Heals 15"
+        }
+      },
+      {
+        "id": "gun",
+        "name": "Pressure Gun",
+        "intent": "attack",
+        "text": "20 damage (+5 each use), +3 Steam",
+        "asc": {
+          "a": 9,
+          "v": "23 base"
+        }
+      },
+      {
+        "id": "up",
+        "name": "Pressure Up",
+        "intent": "attack",
+        "text": "13 damage, +3 Steam",
+        "asc": {
+          "a": 9,
+          "v": "14 damage"
+        }
+      },
+      {
+        "id": "blow",
+        "name": "About To Blow",
+        "intent": "stun",
+        "text": "Invulnerable; prepares to explode"
+      },
+      {
+        "id": "explode",
+        "name": "Explode",
+        "intent": "attack",
+        "text": "Damage equal to stored Steam Eruption, then dies"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Main fight",
+        "opener": [
+          "pressurize"
+        ],
+        "cycle": [
+          "stomp",
+          "ram",
+          "siphon",
+          "gun",
+          "up"
+        ],
+        "rules": [
+          "Pressurize, then Stomp, Ram, Siphon, Pressure Gun, Pressure Up, repeating."
+        ]
+      },
+      {
+        "name": "After lethal damage",
+        "trigger": "Reduced to 0 HP with Steam Eruption",
+        "opener": [
+          "blow",
+          "explode"
+        ],
+        "cycle": [],
+        "rules": [
+          "About To Blow (invulnerable), then Explode next turn — you get one turn to Block."
+        ]
+      }
+    ],
+    "scaling": "Steam: 15 + 3 per turn after turn 1. Pressure Gun: 20, 25, 30…",
+    "threat": [
+      "The fight ends with a final hit equal to stored Steam (e.g. about 45 on turn 11). Keep Block for it.",
+      "Siphon heals every 5th turn."
+    ],
+    "tips": {
+      "general": [
+        "A quicker kill means a smaller explosion."
+      ],
+      "necrobinder": [
+        "The wiki notes a Doom kill skips the explosion entirely."
+      ]
+    },
+    "confidence": "wiki"
+  },
+  {
+    "id": "soul_fysh",
+    "name": "Soul Fysh",
+    "kind": "boss",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Soul_Fysh",
+    "hp": "211",
+    "hpAsc": {
+      "a": 8,
+      "v": "221"
+    },
+    "powers": [],
+    "moves": [
+      {
+        "id": "beckon",
+        "name": "Beckon",
+        "intent": "status",
+        "text": "Shuffles 2 Beckon into your deck (1 draw pile, 1 discard)"
+      },
+      {
+        "id": "degas",
+        "name": "De-Gas",
+        "intent": "attack",
+        "text": "16 damage",
+        "asc": {
+          "a": 9,
+          "v": "18 damage (v0.111.0)"
+        }
+      },
+      {
+        "id": "gaze",
+        "name": "Gaze",
+        "intent": "attack",
+        "text": "7 damage, shuffles 1 Beckon into discard",
+        "asc": {
+          "a": 9,
+          "v": "8 damage"
+        }
+      },
+      {
+        "id": "fade",
+        "name": "Fade",
+        "intent": "buff",
+        "text": "Gains 2 Intangible (effectively 1 of your turns)"
+      },
+      {
+        "id": "scream",
+        "name": "Scream",
+        "intent": "attack",
+        "text": "13 damage, applies 3 Vulnerable",
+        "asc": {
+          "a": 9,
+          "v": "15 damage"
+        }
+      }
+    ],
+    "phases": [
+      {
+        "name": "Whole fight",
+        "opener": [],
+        "cycle": [
+          "beckon",
+          "degas",
+          "gaze",
+          "fade",
+          "scream"
+        ],
+        "rules": [
+          "Fixed 5-turn order, repeating."
+        ]
+      }
+    ],
+    "scaling": "Beckon cards accumulate: 3 more every cycle.",
+    "threat": [
+      "Beckon (status): lose 6 HP at end of turn if it is in your hand.",
+      "Fade on turns 4, 9, 14: your damage on the following turn is mostly wasted (Intangible).",
+      "Scream follows Fade: 3 Vulnerable just before De-Gas comes round again."
+    ],
+    "tips": {
+      "general": [
+        "Plan big damage turns around the Intangible turn, not into it."
+      ],
+      "ironclad": [
+        "Exhaust removes Beckon cards."
+      ],
+      "silent": [
+        "Discard moves Beckon out of your hand before end of turn."
+      ],
+      "necrobinder": [
+        "The wiki notes Doom gets around Intangible."
+      ]
+    },
+    "confidence": "wiki"
+  },
+  {
+    "id": "lagavulin_matriarch",
+    "name": "Lagavulin Matriarch",
+    "kind": "boss",
+    "maps": [
+      "underdocks"
+    ],
+    "wiki": "Lagavulin_Matriarch",
+    "hp": "222",
+    "hpAsc": {
+      "a": 8,
+      "v": "233"
+    },
+    "powers": [
+      {
+        "name": "Plating 12",
+        "text": "Gains Block at end of its turn; drops by 1 each turn. Lost when it wakes."
+      },
+      {
+        "name": "Asleep 3",
+        "text": "Wakes on losing HP or after 3 turns."
+      }
+    ],
+    "moves": [
+      {
+        "id": "sleep",
+        "name": "Sleep",
+        "intent": "sleep",
+        "text": "Asleep. Does nothing."
+      },
+      {
+        "id": "slash",
+        "name": "Slash",
+        "intent": "attack",
+        "text": "19 damage",
+        "asc": {
+          "a": 9,
+          "v": "21 damage"
+        }
+      },
+      {
+        "id": "disembowel",
+        "name": "Disembowel",
+        "intent": "attack",
+        "text": "9 × 2 damage",
+        "asc": {
+          "a": 9,
+          "v": "10 × 2"
+        }
+      },
+      {
+        "id": "slash2",
+        "name": "Slash (2)",
+        "intent": "attack",
+        "text": "12 damage, gains 12 Block",
+        "asc": {
+          "a": 9,
+          "v": "14 damage, 14 Block"
+        }
+      },
+      {
+        "id": "siphon",
+        "name": "Soul Siphon",
+        "intent": "debuff",
+        "text": "You lose 2 Strength and 2 Dexterity; it gains 2 Strength"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Asleep",
+        "opener": [],
+        "cycle": [
+          "sleep"
+        ],
+        "rules": [
+          "Up to 3 turns. Wakes early if it loses HP (damage must get through Plating Block)."
+        ]
+      },
+      {
+        "name": "Awake",
+        "trigger": "Takes HP damage or 3 turns pass",
+        "opener": [],
+        "cycle": [
+          "slash",
+          "disembowel",
+          "slash2",
+          "siphon"
+        ],
+        "rules": [
+          "Loses all Plating, then Slash, Disembowel, Slash (2), Soul Siphon, repeating."
+        ]
+      }
+    ],
+    "scaling": "Soul Siphon every 4th awake turn: it +2 Strength, you −2 Strength and −2 Dexterity.",
+    "threat": [
+      "Up to 3 free turns to set up — but waking it early skips the rest of them.",
+      "Soul Siphon permanently shrinks your Strength and Dexterity: a long fight hurts both your attack and your Block."
+    ],
+    "tips": {
+      "general": [
+        "Whether to set up (Powers, Block) during the sleep or wake it early is the key decision."
+      ]
+    },
+    "confidence": "wiki"
+  }
+]

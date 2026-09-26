@@ -1,0 +1,12 @@
+{
+  "registryVersion": "2026-09-26.1",
+  "gamePatch": "v0.111.0 (beta branch, 13 Aug 2026)",
+  "lastReviewed": "2026-09-26",
+  "primarySource": "https://slaythespire.wiki.gg/wiki/Slay_the_Spire_2:Enemies",
+  "notes": [
+    "Enemy numbers come from the community wiki (slaythespire.wiki.gg), which is edited by players and can lag behind patches.",
+    "Beta patches v0.108.0 to v0.111.0 were checked for Act 1 changes: only Soul Fysh (De-Gas at A9) and two encounter-order rules changed; both are reflected here.",
+    "Ascension values: the wiki usually lists HP changes at A8 and damage changes at A9. Each value records the level it applies from.",
+    "Character tips are reasoned from the listed mechanics, not play-tested. Treat them as prompts to think, not rules."
+  ]
+}

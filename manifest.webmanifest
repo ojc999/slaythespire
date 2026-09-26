@@ -1,0 +1,17 @@
+{
+  "name": "Spire 2 Guide",
+  "short_name": "Spire Guide",
+  "description": "Offline Act 1 guide for Slay the Spire 2: enemies, turn cycles, elites and bosses.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#16131c",
+  "theme_color": "#16131c",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

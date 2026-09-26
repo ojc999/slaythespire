@@ -1,0 +1,80 @@
+[
+  {
+    "id": "overgrowth",
+    "name": "Overgrowth",
+    "act": 1,
+    "theme": "Jungle wilderness: animals, plants and fungi.",
+    "rooms": "15 rooms. The first 3 fights come from the weak pool.",
+    "tests": [
+      "Scaling enemies: Fuzzy Wurm Crawler, Cubex Construct, Byrdonis and the Kin all gain Strength every cycle, so long fights get worse.",
+      "Multi-enemy fights: Ruby Raiders, Inklets, slime swarms, the Kin, and the Wrigglers that burst out of Phrog Parasite.",
+      "Status cards: Slimed (slimes), Dazed (Fogmog's eye), Infection (Phrog Parasite, Wrigglers), Wounds (Vantom)."
+    ],
+    "source": "https://slaythespire.wiki.gg/wiki/Slay_the_Spire_2:Overgrowth",
+    "weakPool": [
+      { "name": "A Lone Nibbit", "enemies": ["nibbit"], "note": "Solo Nibbit opens with Butt." },
+      { "name": "Group of Slimes", "enemies": ["leaf_slime_s", "twig_slime_s", "leaf_slime_m", "twig_slime_m"], "note": "Exact slime mix not confirmed from the wiki." },
+      { "name": "Shrinker Beetle", "enemies": ["shrinker_beetle"] },
+      { "name": "Fuzzy Wurm Crawler", "enemies": ["fuzzy_wurm_crawler"] }
+    ],
+    "normalPool": [
+      { "name": "Inklets", "enemies": ["inklet"], "note": "3 Inklets." },
+      { "name": "Mawler", "enemies": ["mawler"] },
+      { "name": "A Pair of Nibbits", "enemies": ["nibbit"], "note": "Front opens with Hesitant Slice, back with Hiss." },
+      { "name": "Ruby Raiders", "enemies": ["axe_raider", "assassin_raider", "brute_raider", "crossbow_raider", "tracker_raider"], "note": "3 of these 5, no duplicates." },
+      { "name": "Swarm of Slimes", "enemies": ["leaf_slime_m", "twig_slime_m", "leaf_slime_s", "twig_slime_s"], "note": "One of each." },
+      { "name": "Shroom and Slime", "enemies": ["flyconid", "leaf_slime_m", "twig_slime_m"], "note": "Flyconid + one random medium slime." },
+      { "name": "Overgrowth Flora", "enemies": ["flyconid", "snapping_jaxfruit"] },
+      { "name": "Fogmog", "enemies": ["fogmog", "eye_with_teeth"], "note": "Fogmog summons the eye on turn 1." },
+      { "name": "Cubex Construct", "enemies": ["cubex_construct"] },
+      { "name": "Vine Shambler", "enemies": ["vine_shambler"] },
+      { "name": "Overgrowth Crawlers", "enemies": ["shrinker_beetle", "fuzzy_wurm_crawler"] },
+      { "name": "Strangler and Friend", "enemies": ["slithering_strangler", "snapping_jaxfruit", "leaf_slime_m", "twig_slime_m", "leaf_slime_s", "twig_slime_s"], "note": "Strangler + one of: Jaxfruit, a medium slime, or a small Leaf + small Twig slime." }
+    ],
+    "events": [
+      { "name": "Dense Vegetation (event)", "enemies": ["wriggler"], "note": "4 Wrigglers that start awake." }
+    ],
+    "rules": [
+      "Since v0.108.0 you cannot get two slime fights in a row, or two Snapping Jaxfruit fights in a row."
+    ],
+    "elites": ["bygone_effigy", "byrdonis", "phrog_parasite"],
+    "bosses": ["ceremonial_beast", "kin_priest", "vantom"]
+  },
+  {
+    "id": "underdocks",
+    "name": "Underdocks",
+    "act": 1,
+    "theme": "Flooded ruins: aquatic and water-themed enemies.",
+    "rooms": "15 rooms. The first 3 fights come from the weak pool.",
+    "tests": [
+      "Punishment for unblocked damage: Fossil Stalker gains Strength when it hits you; Gremlin Merc steals Gold on every attack.",
+      "Debuffs on you: Frail (Corpse Slugs, Punch Construct, rats, Fossil Stalker), Weak (Haunted Ship, Sludge Spinner), Smoggy (Living Fog) and Soul Siphon (Lagavulin Matriarch).",
+      "Limits on burst: Hardened Shell (Skulking Colony) caps damage per turn; bosses punish the kill (Waterfall Giant explodes) or go Intangible (Soul Fysh)."
+    ],
+    "source": "https://slaythespire.wiki.gg/wiki/Slay_the_Spire_2:Underdocks",
+    "weakPool": [
+      { "name": "Corpse Slugs (2)", "enemies": ["corpse_slug"], "note": "Staggered: each starts on a different move." },
+      { "name": "Seapunk", "enemies": ["seapunk"] },
+      { "name": "Sludge Spinner", "enemies": ["sludge_spinner"] },
+      { "name": "Toadpoles (2)", "enemies": ["toadpole"], "note": "Front Toadpole starts with Spiken." }
+    ],
+    "normalPool": [
+      { "name": "Corpse Slugs (3)", "enemies": ["corpse_slug"] },
+      { "name": "Cultists", "enemies": ["calcified_cultist", "damp_cultist"] },
+      { "name": "Living Fog", "enemies": ["living_fog", "gas_bomb"], "note": "Summons Gas Bombs." },
+      { "name": "Fossil Stalker", "enemies": ["fossil_stalker"] },
+      { "name": "Gremlin Merc", "enemies": ["gremlin_merc", "fat_gremlin", "sneaky_gremlin"], "note": "Fat and Sneaky Gremlins appear when the Merc dies." },
+      { "name": "Haunted Ship", "enemies": ["haunted_ship"] },
+      { "name": "Punch Construct", "enemies": ["punch_construct"] },
+      { "name": "Sewer Clam", "enemies": ["sewer_clam"] },
+      { "name": "Cultist and Seapunk", "enemies": ["calcified_cultist", "seapunk"] },
+      { "name": "Two-Tailed Rats", "enemies": ["two_tailed_rat"], "note": "3 rats; up to 3 more can be summoned." }
+    ],
+    "events": [
+      { "name": "Punch Off (event)", "enemies": ["punch_construct"], "note": "2 Punch Constructs." }
+    ],
+    "rules": [],
+    "elites": ["skulking_colony", "phantasmal_gardener", "terror_eel"],
+    "bosses": ["waterfall_giant", "soul_fysh", "lagavulin_matriarch"]
+  }
+]

@@ -1,0 +1,21 @@
+name: Check registry
+
+on:
+  push:
+    paths: ["registry/**", "tools/**", ".github/workflows/**"]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate registry JSON
+        run: python3 tools/check_registry.py --no-write
+      - name: Check REVIEW.md is up to date
+        run: |
+          python3 tools/check_registry.py
+          git diff --exit-code registry/REVIEW.md || (echo "registry/REVIEW.md is stale: run 'python3 tools/check_registry.py' and commit the result." && exit 1)
