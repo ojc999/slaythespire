@@ -6,9 +6,10 @@ Data follows the latest beta branch (currently v0.111.0, 13 Aug 2026). See `regi
 
 ## Deploy on GitHub Pages (one-off, about 5 minutes)
 
-1. Merge this branch into `main` (open a pull request on GitHub and merge it).
-2. On GitHub, open the repository → **Settings** → **Pages**.
-3. Under **Build and deployment**, set **Source** to *Deploy from a branch*, **Branch** to `main`, folder `/ (root)`, then **Save**.
+1. On GitHub, open the repository → **Settings** → **Pages**.
+2. Under **Build and deployment**, set **Source** to *Deploy from a branch*.
+3. Set **Branch** to `claude/slay-spire-strategy-guide-tokpns` (currently the only branch), folder `/ (root)`, then **Save**.
+   - Optional, tidier long-term: first make this branch the default and rename it `main` (**Settings → General → Default branch**), then choose `main` here.
 4. Wait 1–2 minutes. The page shows the address: `https://ojc999.github.io/slaythespire/`.
 
 ## Install on Android (Chrome)
@@ -27,7 +28,7 @@ Data follows the latest beta branch (currently v0.111.0, 13 Aug 2026). See `regi
    - `meta.json`: patch version and review date. Update these every time.
 2. Run `python3 tools/check_registry.py` from the repository folder. It checks for mistakes (missing commas, a move name that doesn't exist, and so on), then rewrites `registry/REVIEW.md`.
    - If you edit on GitHub instead, the **Check registry** action runs the same check automatically and shows a red ✗ if something is wrong.
-3. Commit and push to `main`. The phone app picks up the new data the next time you open it online (or tap **Info → Check for update**).
+3. Commit and push to the branch that Pages serves. The phone app picks up the new data the next time you open it online (or tap **Info → Check for update**).
 
 ## Troubleshooting
 
