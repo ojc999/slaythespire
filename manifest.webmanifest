@@ -1,7 +1,7 @@
 {
   "name": "Spire 2 Guide",
   "short_name": "Spire Guide",
-  "description": "Offline Act 1 guide for Slay the Spire 2: enemies, turn cycles, elites and bosses.",
+  "description": "Offline guide for Slay the Spire 2: enemies, turn cycles, elites and bosses.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

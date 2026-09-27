@@ -3,49 +3,99 @@
     "id": "ironclad",
     "name": "Ironclad",
     "mechanic": "Strength scaling, Exhaust, self-damage and healing.",
-    "act1": [
-      "Exhaust tools double as answers to status cards (Slimed, Dazed, Infection, Wounds, Beckon).",
-      "Self-damage cards stack with enemy damage-over-time (Constrict, Infection, Beckon). Count it before you play them.",
-      "Strength makes multi-hit attacks better; multi-hit attacks are what strip Slippery quickly."
-    ]
+    "acts": {
+      "1": [
+        "Exhaust tools double as answers to status cards (Slimed, Dazed, Infection, Wounds, Beckon).",
+        "Self-damage cards stack with enemy damage-over-time (Constrict, Infection, Beckon). Count it before you play them.",
+        "Strength makes multi-hit attacks better; multi-hit attacks are what strip Slippery quickly."
+      ],
+      "2": [
+        "Exhaust answers Toxic (Mytes), Dazed (Chompers, Entomancer) and Frantic Escape.",
+        "Big single hits are capped by Exoskeleton's Hard to Kill (9 per hit)."
+      ],
+      "3": [
+        "Exhaust removes Burns (Mecha Knight, Test Subject) and Wither (Aeonglass).",
+        "Strength stolen by The Lost comes back when it dies."
+      ]
+    }
   },
   {
     "id": "silent",
     "name": "Silent",
     "mechanic": "Poison, Shivs (many cheap hits) and discard.",
-    "act1": [
-      "Poison is not an attack, so it ignores attack-only effects such as Tangled and Shrink, and is not capped the same way by Hardened Shell (the wiki notes poison can add up to 20 more damage in a turn).",
-      "Many cheap cards and hits: strong against Slippery (Inklets, Vantom) and Slow (Bygone Effigy).",
-      "Discard lets you move status cards out of your hand before end-of-turn penalties (Infection, Beckon) trigger."
-    ]
+    "acts": {
+      "1": [
+        "Poison is not an attack, so it ignores attack-only effects such as Tangled and Shrink, and is not capped the same way by Hardened Shell (the wiki notes poison can add up to 20 more damage in a turn).",
+        "Many cheap cards and hits: strong against Slippery (Inklets, Vantom) and Slow (Bygone Effigy).",
+        "Discard lets you move status cards out of your hand before end-of-turn penalties (Infection, Beckon) trigger."
+      ],
+      "2": [
+        "Poison is not an Attack: it avoids Entomancer's Personal Hive and Flutter's 50% reduction (Thieving Hopper).",
+        "Shivs suit Exoskeletons (9 cap per hit) but trigger Personal Hive once per hit on Entomancer.",
+        "Many cards a turn costs more against Tender (Hunter Killer)."
+      ],
+      "3": [
+        "Discard moves Burns and Wither out of your hand before end of turn.",
+        "Poison is not an Attack, so Soar (Owl Magistrate) does not halve it."
+      ]
+    }
   },
   {
     "id": "defect",
     "name": "Defect",
     "mechanic": "Orbs (Lightning, Frost, Dark, Plasma, Glass) channelled and evoked.",
-    "act1": [
-      "Orb damage is not an Attack card: it ignores Tangled, but also gets no bonus from Slow.",
-      "Lightning passives hit several times over a fight, which helps against Slippery and multi-enemy fights.",
-      "Frost gives steady Block, useful against enemies that scale with unblocked damage (Fossil Stalker)."
-    ]
+    "acts": {
+      "1": [
+        "Orb damage is not an Attack card: it ignores Tangled, but also gets no bonus from Slow.",
+        "Lightning passives hit several times over a fight, which helps against Slippery and multi-enemy fights.",
+        "Frost gives steady Block, useful against enemies that scale with unblocked damage (Fossil Stalker)."
+      ],
+      "2": [
+        "Orb damage is not an Attack card: it avoids Personal Hive and Flutter.",
+        "Frost Block is not a Skill, so it avoids Vital Spark (Infested Prism) — per the wiki's description of Tainted Skills."
+      ],
+      "3": [
+        "Orb damage is not an Attack card: it is not halved by Soar (Owl Magistrate).",
+        "Artifact on Mecha Knight (3) and Aeonglass (3) blocks your first debuffs."
+      ]
+    }
   },
   {
     "id": "regent",
     "name": "Regent",
     "mechanic": "Stars as a second resource; Forge scales the Sovereign Blade.",
-    "act1": [
-      "A single big Sovereign Blade hit is weak against per-hit caps: Slippery turns each hit into 1 damage, and Hardened Shell caps HP loss per turn.",
-      "Big single hits are strong against HP-threshold bosses (Ceremonial Beast, Terror Eel), where you want to cross the threshold on your terms."
-    ]
+    "acts": {
+      "1": [
+        "A single big Sovereign Blade hit is weak against per-hit caps: Slippery turns each hit into 1 damage, and Hardened Shell caps HP loss per turn.",
+        "Big single hits are strong against HP-threshold bosses (Ceremonial Beast, Terror Eel), where you want to cross the threshold on your terms."
+      ],
+      "2": [
+        "A single Sovereign Blade hit is capped at 9 per Exoskeleton.",
+        "Kaiser Crab's Surrounded mechanic turns you towards the claw you target with single-target cards."
+      ],
+      "3": [
+        "Big single hits are strong against the one-target bosses here, but The Lost steals Strength every other turn."
+      ]
+    }
   },
   {
     "id": "necrobinder",
     "name": "Necrobinder",
     "mechanic": "Osty (summoned hand that attacks and absorbs damage) and Doom (enemy dies after its turn if Doom is at least its HP).",
-    "act1": [
-      "The wiki notes that Waterfall Giant killed by Doom dies without exploding, and that Doom gets around Soul Fysh's Intangible.",
-      "Osty absorbs hits, which matters most against multi-hit attacks and large groups.",
-      "Not checked: whether Doom deaths count as losing HP for Slippery or Hardened Shell."
-    ]
+    "acts": {
+      "1": [
+        "The wiki notes that Waterfall Giant killed by Doom dies without exploding, and that Doom gets around Soul Fysh's Intangible.",
+        "Osty absorbs hits, which matters most against multi-hit attacks and large groups.",
+        "Not checked: whether Doom deaths count as losing HP for Slippery or Hardened Shell."
+      ],
+      "2": [
+        "Osty takes hits for you, which matters against multi-hit attacks (Puncture, Beeeees!).",
+        "Doom is not an Attack, so it avoids Personal Hive and Flutter."
+      ],
+      "3": [
+        "The wiki notes Paper Cuts (Scroll of Biting) does not trigger on damage to Osty.",
+        "Doom may get around Test Subject's Intangible in Form 3 (not checked)."
+      ]
+    }
   }
 ]

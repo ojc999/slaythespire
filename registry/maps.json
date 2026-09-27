@@ -12,33 +12,157 @@
     ],
     "source": "https://slaythespire.wiki.gg/wiki/Slay_the_Spire_2:Overgrowth",
     "weakPool": [
-      { "name": "A Lone Nibbit", "enemies": ["nibbit"], "note": "Solo Nibbit opens with Butt." },
-      { "name": "Group of Slimes", "enemies": ["leaf_slime_s", "twig_slime_s", "leaf_slime_m", "twig_slime_m"], "note": "Exact slime mix not confirmed from the wiki." },
-      { "name": "Shrinker Beetle", "enemies": ["shrinker_beetle"] },
-      { "name": "Fuzzy Wurm Crawler", "enemies": ["fuzzy_wurm_crawler"] }
+      {
+        "name": "A Lone Nibbit",
+        "enemies": [
+          "nibbit"
+        ],
+        "note": "Solo Nibbit opens with Butt."
+      },
+      {
+        "name": "Group of Slimes",
+        "enemies": [
+          "leaf_slime_s",
+          "twig_slime_s",
+          "leaf_slime_m",
+          "twig_slime_m"
+        ],
+        "note": "Exact slime mix not confirmed from the wiki."
+      },
+      {
+        "name": "Shrinker Beetle",
+        "enemies": [
+          "shrinker_beetle"
+        ]
+      },
+      {
+        "name": "Fuzzy Wurm Crawler",
+        "enemies": [
+          "fuzzy_wurm_crawler"
+        ]
+      }
     ],
     "normalPool": [
-      { "name": "Inklets", "enemies": ["inklet"], "note": "3 Inklets." },
-      { "name": "Mawler", "enemies": ["mawler"] },
-      { "name": "A Pair of Nibbits", "enemies": ["nibbit"], "note": "Front opens with Hesitant Slice, back with Hiss." },
-      { "name": "Ruby Raiders", "enemies": ["axe_raider", "assassin_raider", "brute_raider", "crossbow_raider", "tracker_raider"], "note": "3 of these 5, no duplicates." },
-      { "name": "Swarm of Slimes", "enemies": ["leaf_slime_m", "twig_slime_m", "leaf_slime_s", "twig_slime_s"], "note": "One of each." },
-      { "name": "Shroom and Slime", "enemies": ["flyconid", "leaf_slime_m", "twig_slime_m"], "note": "Flyconid + one random medium slime." },
-      { "name": "Overgrowth Flora", "enemies": ["flyconid", "snapping_jaxfruit"] },
-      { "name": "Fogmog", "enemies": ["fogmog", "eye_with_teeth"], "note": "Fogmog summons the eye on turn 1." },
-      { "name": "Cubex Construct", "enemies": ["cubex_construct"] },
-      { "name": "Vine Shambler", "enemies": ["vine_shambler"] },
-      { "name": "Overgrowth Crawlers", "enemies": ["shrinker_beetle", "fuzzy_wurm_crawler"] },
-      { "name": "Strangler and Friend", "enemies": ["slithering_strangler", "snapping_jaxfruit", "leaf_slime_m", "twig_slime_m", "leaf_slime_s", "twig_slime_s"], "note": "Strangler + one of: Jaxfruit, a medium slime, or a small Leaf + small Twig slime." }
+      {
+        "name": "Inklets",
+        "enemies": [
+          "inklet"
+        ],
+        "note": "3 Inklets."
+      },
+      {
+        "name": "Mawler",
+        "enemies": [
+          "mawler"
+        ]
+      },
+      {
+        "name": "A Pair of Nibbits",
+        "enemies": [
+          "nibbit"
+        ],
+        "note": "Front opens with Hesitant Slice, back with Hiss."
+      },
+      {
+        "name": "Ruby Raiders",
+        "enemies": [
+          "axe_raider",
+          "assassin_raider",
+          "brute_raider",
+          "crossbow_raider",
+          "tracker_raider"
+        ],
+        "note": "3 of these 5, no duplicates."
+      },
+      {
+        "name": "Swarm of Slimes",
+        "enemies": [
+          "leaf_slime_m",
+          "twig_slime_m",
+          "leaf_slime_s",
+          "twig_slime_s"
+        ],
+        "note": "One of each."
+      },
+      {
+        "name": "Shroom and Slime",
+        "enemies": [
+          "flyconid",
+          "leaf_slime_m",
+          "twig_slime_m"
+        ],
+        "note": "Flyconid + one random medium slime."
+      },
+      {
+        "name": "Overgrowth Flora",
+        "enemies": [
+          "flyconid",
+          "snapping_jaxfruit"
+        ]
+      },
+      {
+        "name": "Fogmog",
+        "enemies": [
+          "fogmog",
+          "eye_with_teeth"
+        ],
+        "note": "Fogmog summons the eye on turn 1."
+      },
+      {
+        "name": "Cubex Construct",
+        "enemies": [
+          "cubex_construct"
+        ]
+      },
+      {
+        "name": "Vine Shambler",
+        "enemies": [
+          "vine_shambler"
+        ]
+      },
+      {
+        "name": "Overgrowth Crawlers",
+        "enemies": [
+          "shrinker_beetle",
+          "fuzzy_wurm_crawler"
+        ]
+      },
+      {
+        "name": "Strangler and Friend",
+        "enemies": [
+          "slithering_strangler",
+          "snapping_jaxfruit",
+          "leaf_slime_m",
+          "twig_slime_m",
+          "leaf_slime_s",
+          "twig_slime_s"
+        ],
+        "note": "Strangler + one of: Jaxfruit, a medium slime, or a small Leaf + small Twig slime."
+      }
     ],
     "events": [
-      { "name": "Dense Vegetation (event)", "enemies": ["wriggler"], "note": "4 Wrigglers that start awake." }
+      {
+        "name": "Dense Vegetation (event)",
+        "enemies": [
+          "wriggler"
+        ],
+        "note": "4 Wrigglers that start awake."
+      }
     ],
     "rules": [
       "Since v0.108.0 you cannot get two slime fights in a row, or two Snapping Jaxfruit fights in a row."
     ],
-    "elites": ["bygone_effigy", "byrdonis", "phrog_parasite"],
-    "bosses": ["ceremonial_beast", "kin_priest", "vantom"]
+    "elites": [
+      "bygone_effigy",
+      "byrdonis",
+      "phrog_parasite"
+    ],
+    "bosses": [
+      "ceremonial_beast",
+      "kin_priest",
+      "vantom"
+    ],
+    "weakCount": 3
   },
   {
     "id": "underdocks",
@@ -53,28 +177,390 @@
     ],
     "source": "https://slaythespire.wiki.gg/wiki/Slay_the_Spire_2:Underdocks",
     "weakPool": [
-      { "name": "Corpse Slugs (2)", "enemies": ["corpse_slug"], "note": "Staggered: each starts on a different move." },
-      { "name": "Seapunk", "enemies": ["seapunk"] },
-      { "name": "Sludge Spinner", "enemies": ["sludge_spinner"] },
-      { "name": "Toadpoles (2)", "enemies": ["toadpole"], "note": "Front Toadpole starts with Spiken." }
+      {
+        "name": "Corpse Slugs (2)",
+        "enemies": [
+          "corpse_slug"
+        ],
+        "note": "Staggered: each starts on a different move."
+      },
+      {
+        "name": "Seapunk",
+        "enemies": [
+          "seapunk"
+        ]
+      },
+      {
+        "name": "Sludge Spinner",
+        "enemies": [
+          "sludge_spinner"
+        ]
+      },
+      {
+        "name": "Toadpoles (2)",
+        "enemies": [
+          "toadpole"
+        ],
+        "note": "Front Toadpole starts with Spiken."
+      }
     ],
     "normalPool": [
-      { "name": "Corpse Slugs (3)", "enemies": ["corpse_slug"] },
-      { "name": "Cultists", "enemies": ["calcified_cultist", "damp_cultist"] },
-      { "name": "Living Fog", "enemies": ["living_fog", "gas_bomb"], "note": "Summons Gas Bombs." },
-      { "name": "Fossil Stalker", "enemies": ["fossil_stalker"] },
-      { "name": "Gremlin Merc", "enemies": ["gremlin_merc", "fat_gremlin", "sneaky_gremlin"], "note": "Fat and Sneaky Gremlins appear when the Merc dies." },
-      { "name": "Haunted Ship", "enemies": ["haunted_ship"] },
-      { "name": "Punch Construct", "enemies": ["punch_construct"] },
-      { "name": "Sewer Clam", "enemies": ["sewer_clam"] },
-      { "name": "Cultist and Seapunk", "enemies": ["calcified_cultist", "seapunk"] },
-      { "name": "Two-Tailed Rats", "enemies": ["two_tailed_rat"], "note": "3 rats; up to 3 more can be summoned." }
+      {
+        "name": "Corpse Slugs (3)",
+        "enemies": [
+          "corpse_slug"
+        ]
+      },
+      {
+        "name": "Cultists",
+        "enemies": [
+          "calcified_cultist",
+          "damp_cultist"
+        ]
+      },
+      {
+        "name": "Living Fog",
+        "enemies": [
+          "living_fog",
+          "gas_bomb"
+        ],
+        "note": "Summons Gas Bombs."
+      },
+      {
+        "name": "Fossil Stalker",
+        "enemies": [
+          "fossil_stalker"
+        ]
+      },
+      {
+        "name": "Gremlin Merc",
+        "enemies": [
+          "gremlin_merc",
+          "fat_gremlin",
+          "sneaky_gremlin"
+        ],
+        "note": "Fat and Sneaky Gremlins appear when the Merc dies."
+      },
+      {
+        "name": "Haunted Ship",
+        "enemies": [
+          "haunted_ship"
+        ]
+      },
+      {
+        "name": "Punch Construct",
+        "enemies": [
+          "punch_construct"
+        ]
+      },
+      {
+        "name": "Sewer Clam",
+        "enemies": [
+          "sewer_clam"
+        ]
+      },
+      {
+        "name": "Cultist and Seapunk",
+        "enemies": [
+          "calcified_cultist",
+          "seapunk"
+        ]
+      },
+      {
+        "name": "Two-Tailed Rats",
+        "enemies": [
+          "two_tailed_rat"
+        ],
+        "note": "3 rats; up to 3 more can be summoned."
+      }
     ],
     "events": [
-      { "name": "Punch Off (event)", "enemies": ["punch_construct"], "note": "2 Punch Constructs." }
+      {
+        "name": "Punch Off (event)",
+        "enemies": [
+          "punch_construct"
+        ],
+        "note": "2 Punch Constructs."
+      }
     ],
     "rules": [],
-    "elites": ["skulking_colony", "phantasmal_gardener", "terror_eel"],
-    "bosses": ["waterfall_giant", "soul_fysh", "lagavulin_matriarch"]
+    "elites": [
+      "skulking_colony",
+      "phantasmal_gardener",
+      "terror_eel"
+    ],
+    "bosses": [
+      "waterfall_giant",
+      "soul_fysh",
+      "lagavulin_matriarch"
+    ],
+    "weakCount": 3
+  },
+  {
+    "id": "hive",
+    "name": "Hive",
+    "act": 2,
+    "theme": "An insect hive: bugs, eggs and constructs.",
+    "rooms": "14 rooms. The first 2 fights come from the weak pool (2 of its 4 encounters).",
+    "weakCount": 2,
+    "tests": [
+      "Status cards: Dazed (Chompers, Entomancer), Toxic (Mytes), Frantic Escape (The Insatiable).",
+      "Caps and timers: Exoskeleton caps damage per hit at 9, Thieving Hopper flees on turn 5, Sandpit kills you on a timer, Decimillipede segments revive.",
+      "Punishment for how you play: Tender (Hunter Killer) and Vital Spark (Infested Prism) cost you for each card or Skill played; Personal Hive punishes multi-hit attacks."
+    ],
+    "source": "https://slaythespire.wiki.gg/wiki/Slay_the_Spire_2:Hive",
+    "weakPool": [
+      {
+        "name": "Bowlbugs",
+        "enemies": [
+          "bowlbug_rock",
+          "bowlbug_egg",
+          "bowlbug_nectar"
+        ],
+        "note": "Rock + one of Egg or Nectar."
+      },
+      {
+        "name": "Exoskeletons (3)",
+        "enemies": [
+          "exoskeleton"
+        ]
+      },
+      {
+        "name": "Thieving Hopper",
+        "enemies": [
+          "thieving_hopper"
+        ]
+      },
+      {
+        "name": "Tunneler",
+        "enemies": [
+          "tunneler"
+        ]
+      }
+    ],
+    "normalPool": [
+      {
+        "name": "Bowlbug Swarm",
+        "enemies": [
+          "bowlbug_rock",
+          "bowlbug_egg",
+          "bowlbug_nectar"
+        ],
+        "note": "Rock + 2 random workers (Egg / Nectar)."
+      },
+      {
+        "name": "An Automaton Pair",
+        "enemies": [
+          "chomper"
+        ],
+        "note": "2 Chompers."
+      },
+      {
+        "name": "Many Exoskeletons",
+        "enemies": [
+          "exoskeleton"
+        ],
+        "note": "4 Exoskeletons."
+      },
+      {
+        "name": "Hunter Killer",
+        "enemies": [
+          "hunter_killer"
+        ]
+      },
+      {
+        "name": "Louse Progenitor",
+        "enemies": [
+          "louse_progenitor"
+        ]
+      },
+      {
+        "name": "Mass of Mytes",
+        "enemies": [
+          "myte"
+        ],
+        "note": "2 Mytes."
+      },
+      {
+        "name": "Ovicopter",
+        "enemies": [
+          "ovicopter",
+          "tough_egg",
+          "hatchling"
+        ]
+      },
+      {
+        "name": "Slumber Party",
+        "enemies": [
+          "bowlbug_rock",
+          "bowlbug_silk",
+          "slumbering_beetle"
+        ]
+      },
+      {
+        "name": "Spiny Toad",
+        "enemies": [
+          "spiny_toad"
+        ]
+      },
+      {
+        "name": "The Obscura",
+        "enemies": [
+          "the_obscura",
+          "parafright"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "name": "Mysterious Knight (The Lantern Key event)",
+        "enemies": [
+          "mysterious_knight"
+        ]
+      },
+      {
+        "name": "The Merchant??? (event)",
+        "enemies": [
+          "merchant_fake"
+        ],
+        "note": "Only if you throw a Foul Potion at the fake Merchant."
+      }
+    ],
+    "rules": [],
+    "elites": [
+      "decimillipede",
+      "entomancer",
+      "infested_prism"
+    ],
+    "bosses": [
+      "the_insatiable",
+      "knowledge_demon",
+      "kaiser_crusher"
+    ]
+  },
+  {
+    "id": "glory",
+    "name": "Glory",
+    "act": 3,
+    "theme": "A royal city: knights, constructs and the Queen's court.",
+    "rooms": "13 rooms. The first 2 fights come from the weak pool (2 of its 3 encounters).",
+    "weakCount": 2,
+    "tests": [
+      "Big single hits: Verdict 33, Smother 30, Magic Bomb 35, Heavy Cleave 35+, Big Pounce 45. Knowing which turn they land matters most here.",
+      "Stat theft and permanent costs: The Lost and Forgotten steal Strength/Dexterity, Scroll of Biting takes Max HP, the Queen applies 99 Frail/Weak/Vulnerable.",
+      "Long fights: several enemies scale every turn (Devoted Sculptor +9 Strength a turn) or keep coming back (Axebot, Test Subject)."
+    ],
+    "source": "https://slaythespire.wiki.gg/wiki/Slay_the_Spire_2:Glory",
+    "weakPool": [
+      {
+        "name": "Devoted Sculptor",
+        "enemies": [
+          "devoted_sculptor"
+        ]
+      },
+      {
+        "name": "Scrolls of Biting (3)",
+        "enemies": [
+          "scroll_of_biting"
+        ]
+      },
+      {
+        "name": "Turret Operator",
+        "enemies": [
+          "turret_operator",
+          "living_shield"
+        ],
+        "note": "With a Living Shield."
+      }
+    ],
+    "normalPool": [
+      {
+        "name": "Axebot",
+        "enemies": [
+          "axebot"
+        ]
+      },
+      {
+        "name": "Constructs",
+        "enemies": [
+          "punch_construct",
+          "cubex_construct"
+        ],
+        "note": "1 Punch + 2 Cubex. Stats shown are the wiki's single entry; Act 3 versions may differ."
+      },
+      {
+        "name": "Fabricator",
+        "enemies": [
+          "fabricator",
+          "zapbot",
+          "stabbot",
+          "guardbot",
+          "noisebot"
+        ]
+      },
+      {
+        "name": "Frog Knight",
+        "enemies": [
+          "frog_knight"
+        ]
+      },
+      {
+        "name": "Globe Head",
+        "enemies": [
+          "globe_head"
+        ]
+      },
+      {
+        "name": "Owl Magistrate",
+        "enemies": [
+          "owl_magistrate"
+        ]
+      },
+      {
+        "name": "Scrolls of Biting (4)",
+        "enemies": [
+          "scroll_of_biting"
+        ]
+      },
+      {
+        "name": "Slimed Berserker",
+        "enemies": [
+          "slimed_berserker"
+        ]
+      },
+      {
+        "name": "The Lost and Forgotten",
+        "enemies": [
+          "the_lost",
+          "the_forgotten"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "name": "The Merchant??? (event)",
+        "enemies": [
+          "merchant_fake"
+        ],
+        "note": "Only if you throw a Foul Potion at the fake Merchant."
+      },
+      {
+        "name": "Battleworn Dummy (event)",
+        "enemies": [
+          "battle_friend"
+        ]
+      }
+    ],
+    "rules": [],
+    "elites": [
+      "flail_knight",
+      "mecha_knight",
+      "soul_nexus"
+    ],
+    "bosses": [
+      "queen",
+      "test_subject",
+      "aeonglass"
+    ]
   }
 ]

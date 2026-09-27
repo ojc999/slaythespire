@@ -102,6 +102,17 @@ def main():
 
     char_ids = {c["id"] for c in chars}
     map_ids = {m["id"] for m in maps}
+    acts = {str(m.get("act")) for m in maps}
+    for m in maps:
+        for field in ("id", "name", "act", "weakCount", "tests", "weakPool", "normalPool", "elites", "bosses"):
+            if field not in m:
+                err(m.get("id", "<map>"), f"missing field '{field}'")
+    for c in chars:
+        for field in ("id", "name", "mechanic", "acts"):
+            if field not in c:
+                err(c.get("id", "<character>"), f"missing field '{field}'")
+        for a in acts - set(c.get("acts", {})):
+            warnings.append(f"[{c.get('id')}] has no notes for Act {a}")
     enemy_ids = [e.get("id") for e in enemies]
     dupes = {x for x in enemy_ids if enemy_ids.count(x) > 1}
     for d in dupes:

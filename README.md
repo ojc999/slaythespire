@@ -1,6 +1,6 @@
 # Spire 2 Guide
 
-An offline phone guide for **Slay the Spire 2**, Act 1 (Overgrowth and Underdocks). It shows which enemies, elites and bosses you can meet on your map, and, for each one, its turn cycle, scaling, and what it punishes. There is also a turn counter you can tap through during a fight, character-specific notes, and a **New run** button.
+An offline phone guide for **Slay the Spire 2**: Act 1 (Overgrowth or Underdocks), Act 2 (Hive) and Act 3 (Glory). It shows which enemies, elites and bosses you can meet on your map, and, for each one, its turn cycle, scaling, and what it punishes. There is also a turn counter you can tap through during a fight, character-specific notes, and a **New run** button.
 
 Data follows the latest beta branch (currently v0.111.0, 13 Aug 2026). See `registry/REVIEW.md` for the full list and the entries still flagged for checking.
 

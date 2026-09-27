@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var APP_VERSION = "1.0.0";
+  var APP_VERSION = "1.1.0";
   var KEYS = { run: "sts2.run", notes: "sts2.notes", log: "sts2.log" };
   var LOG_MAX = 50;
 
@@ -50,8 +50,12 @@
 
   // ---------- State ----------
   var DATA = null; // { meta, characters, maps, enemies, byId }
-  function blankRun() { return { character: null, map: null, asc: 0, boss: null, trackers: {} }; }
+  // Per-act choices: maps and bosses are keyed by act number.
+  function blankRun() { return { character: null, act: 1, maps: {}, bosses: {}, asc: 0, trackers: {} }; }
   var run = Object.assign(blankRun(), store.get(KEYS.run, {}));
+  // Migrate runs saved by v1.0 (single Act 1 map and boss).
+  if (run.map) { run.maps[1] = run.map; delete run.map; }
+  if (run.boss) { run.bosses[1] = run.boss; delete run.boss; }
   function saveRun() { store.set(KEYS.run, run); }
 
   // ---------- Helpers ----------
@@ -121,20 +125,36 @@
   }
 
   // ---------- Views ----------
+  function mapsForAct(act) { return DATA.maps.filter(function (x) { return x.act === act; }); }
+  function currentMap() {
+    var list = mapsForAct(run.act);
+    // Acts with a single map need no choice.
+    if (list.length === 1) return list[0];
+    var id = run.maps[run.act];
+    return list.find(function (x) { return x.id === id; }) || null;
+  }
+  function chip(id, label, pressed) {
+    return '<button type="button" class="chip" data-id="' + esc(id) + '" aria-pressed="' + pressed + '">' + esc(label) + "</button>";
+  }
+
   function viewHome() {
-    var m = run.map && DATA.maps.find(function (x) { return x.id === run.map; });
+    var acts = DATA.maps.map(function (x) { return x.act; }).filter(function (v, i, arr) { return arr.indexOf(v) === i; }).sort();
+    if (acts.indexOf(run.act) < 0) run.act = acts[0];
+    var actMaps = mapsForAct(run.act);
+    var m = currentMap();
     var ch = run.character && DATA.characters.find(function (x) { return x.id === run.character; });
+    var boss = run.bosses[run.act] || null;
     var h = [];
 
     h.push('<section class="card stack"><h1>This run</h1>');
     h.push('<div><div class="small muted">Character</div><div class="chips" id="pick-char">' +
-      DATA.characters.map(function (c) {
-        return '<button type="button" class="chip" data-id="' + esc(c.id) + '" aria-pressed="' + (run.character === c.id) + '">' + esc(c.name) + "</button>";
-      }).join("") + "</div></div>");
-    h.push('<div><div class="small muted">Act 1 map</div><div class="chips" id="pick-map">' +
-      DATA.maps.filter(function (x) { return x.act === 1; }).map(function (x) {
-        return '<button type="button" class="chip" data-id="' + esc(x.id) + '" aria-pressed="' + (run.map === x.id) + '">' + esc(x.name) + "</button>";
-      }).join("") + "</div></div>");
+      DATA.characters.map(function (c) { return chip(c.id, c.name, run.character === c.id); }).join("") + "</div></div>");
+    h.push('<div><div class="small muted">Act</div><div class="chips" id="pick-act">' +
+      acts.map(function (a) { return chip(String(a), "Act " + a, run.act === a); }).join("") + "</div></div>");
+    if (actMaps.length > 1) {
+      h.push('<div><div class="small muted">Act ' + run.act + ' map</div><div class="chips" id="pick-map">' +
+        actMaps.map(function (x) { return chip(x.id, x.name, !!m && m.id === x.id); }).join("") + "</div></div>");
+    }
     h.push('<div class="row"><label for="asc" class="small muted">Ascension</label>' +
       '<select id="asc">' + Array.from({ length: 11 }, function (_, i) {
         return '<option value="' + i + '"' + (run.asc === i ? " selected" : "") + ">" + i + "</option>";
@@ -142,18 +162,20 @@
     h.push("</section>");
 
     if (!m) {
-      h.push('<p class="muted">Pick the map to see its enemies, elites and bosses. You can tell which Act 1 map you are on from the first screen of the act.</p>');
+      h.push('<p class="muted">Pick the map to see its enemies, elites and bosses. You can tell which map you are on from the first screen of the act.</p>');
       app().innerHTML = h.join("");
       bindHome();
       return;
     }
 
+    h.push('<h2>Act ' + m.act + ": " + esc(m.name) + "</h2>");
+
     // Boss
     h.push('<section class="card"><h2>Boss</h2><p class="small muted">The boss is shown at the top of the map. Tap it here to pin it.</p>');
     h.push('<div class="chips" id="pick-boss">' + m.bosses.map(function (id) {
-      return '<button type="button" class="chip" data-id="' + esc(id) + '" aria-pressed="' + (run.boss === id) + '">' + esc(DATA.byId[id].name) + "</button>";
+      return chip(id, DATA.byId[id].name, boss === id);
     }).join("") + "</div>");
-    var bossIds = run.boss ? [run.boss] : m.bosses;
+    var bossIds = boss ? [boss] : m.bosses;
     h.push('<ul class="list">' + bossIds.map(function (id) {
       var b = DATA.byId[id];
       return "<li>" + enemyLink(id) + '<div class="small muted">' + esc(b.threat && b.threat[0]) + "</div></li>";
@@ -175,7 +197,8 @@
             '<ul class="list">' + enc.enemies.map(function (id) { return "<li>" + enemyLink(id) + "</li>"; }).join("") + "</ul></details>";
         }).join("") + "</section>";
     }
-    h.push(pool("Hallway: first 3 fights", m.weakPool, "The first three fights of the act come from this easier pool."));
+    var n = m.weakCount || 3;
+    h.push(pool("Hallway: first " + n + " fights", m.weakPool, "The first " + n + " fights of the act come from this easier pool."));
     h.push(pool("Hallway: rest of the act", m.normalPool));
     h.push(pool("Event fights", m.events));
 
@@ -184,7 +207,9 @@
       '<p class="small muted">' + esc(m.rooms) + "</p></section>");
 
     if (ch) {
-      h.push('<section class="card"><h2>' + esc(ch.name) + " in Act 1</h2><p class=\"small muted\">" + esc(ch.mechanic) + "</p>" + bullets(ch.act1) + "</section>");
+      var notes = (ch.acts && ch.acts[String(m.act)]) || [];
+      h.push('<section class="card"><h2>' + esc(ch.name) + " in Act " + m.act + '</h2><p class="small muted">' + esc(ch.mechanic) + "</p>" +
+        (notes.length ? bullets(notes) : '<p class="muted">No notes for this act yet.</p>') + "</section>");
     }
 
     app().innerHTML = h.join("");
@@ -192,22 +217,26 @@
   }
 
   function bindHome() {
-    function chipGroup(sel, key, toggle) {
+    function onChip(sel, fn) {
       var el = $(sel);
       if (!el) return;
       el.addEventListener("click", function (ev) {
         var b = ev.target.closest("button[data-id]");
         if (!b) return;
-        var id = b.getAttribute("data-id");
-        run[key] = toggle && run[key] === id ? null : id;
-        if (key === "map") run.boss = null;
+        fn(b.getAttribute("data-id"));
         saveRun();
         render();
       });
     }
-    chipGroup("#pick-char", "character", true);
-    chipGroup("#pick-map", "map", false);
-    chipGroup("#pick-boss", "boss", true);
+    onChip("#pick-char", function (id) { run.character = run.character === id ? null : id; });
+    onChip("#pick-act", function (id) { run.act = Number(id); });
+    onChip("#pick-map", function (id) {
+      if (run.maps[run.act] !== id) delete run.bosses[run.act];
+      run.maps[run.act] = id;
+    });
+    onChip("#pick-boss", function (id) {
+      if (run.bosses[run.act] === id) delete run.bosses[run.act]; else run.bosses[run.act] = id;
+    });
     var asc = $("#asc");
     if (asc) asc.addEventListener("change", function () { run.asc = Number(asc.value) || 0; saveRun(); });
   }
@@ -349,7 +378,8 @@
     function show() {
       var term = q.value.trim().toLowerCase();
       var list = DATA.enemies.filter(function (e) {
-        if (run.map && e.maps.indexOf(run.map) < 0 && !term) return false;
+        var cm = currentMap();
+        if (cm && e.maps.indexOf(cm.id) < 0 && !term) return false;
         return !term || e.name.toLowerCase().indexOf(term) >= 0;
       }).sort(function (a, b) { return a.name.localeCompare(b.name); });
       $("#results").innerHTML = list.map(function (e) {
@@ -374,7 +404,7 @@
       "Service worker: " + ("serviceWorker" in navigator ? (navigator.serviceWorker.controller ? "active" : "registered, not yet controlling") : "not supported"),
       "Online: " + navigator.onLine,
       "User agent: " + navigator.userAgent,
-      "Run: " + JSON.stringify({ character: run.character, map: run.map, asc: run.asc, boss: run.boss }),
+      "Run: " + JSON.stringify({ character: run.character, act: run.act, maps: run.maps, bosses: run.bosses, asc: run.asc }),
       "",
       "Log (" + logs.length + "):"
     ].concat(logs.map(function (l) { return l.t + " " + l.level.toUpperCase() + " " + l.msg + (l.detail ? " | " + l.detail : ""); }));
